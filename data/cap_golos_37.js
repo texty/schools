@@ -1,0 +1,31 @@
+var json_cap_golos_37 = {
+"type": "FeatureCollection",
+"name": "cap_golos_37",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "q2wHide_Number": "269", "Occupancy2": "142" }, "geometry": { "type": "Point", "coordinates": [ 30.514954, 50.431061 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "121", "Occupancy2": "119" }, "geometry": { "type": "Point", "coordinates": [ 30.517464725637964, 50.419814595739915 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "369", "Occupancy2": "114" }, "geometry": { "type": "Point", "coordinates": [ 30.521376176913915, 50.417344406276314 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "214", "Occupancy2": "108" }, "geometry": { "type": "Point", "coordinates": [ 30.512304, 50.405432 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "589", "Occupancy2": "107" }, "geometry": { "type": "Point", "coordinates": [ 30.518689, 50.401256 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "263", "Occupancy2": "106" }, "geometry": { "type": "Point", "coordinates": [ 30.502243, 50.394595 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "229", "Occupancy2": "106" }, "geometry": { "type": "Point", "coordinates": [ 30.522269, 50.395369 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "437", "Occupancy2": "106" }, "geometry": { "type": "Point", "coordinates": [ 30.502376, 50.397097 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "520", "Occupancy2": "106" }, "geometry": { "type": "Point", "coordinates": [ 30.532872, 50.398268 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "330", "Occupancy2": "103" }, "geometry": { "type": "Point", "coordinates": [ 30.489819, 50.389531 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "378", "Occupancy2": "102" }, "geometry": { "type": "Point", "coordinates": [ 30.450114491008833, 50.381102039761167 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "578", "Occupancy2": "102" }, "geometry": { "type": "Point", "coordinates": [ 30.483685, 50.386373 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "544", "Occupancy2": "101" }, "geometry": { "type": "Point", "coordinates": [ 30.459693, 50.364265855948553 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "529", "Occupancy2": "101" }, "geometry": { "type": "Point", "coordinates": [ 30.458008, 50.365661 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "399", "Occupancy2": "101" }, "geometry": { "type": "Point", "coordinates": [ 30.448709, 50.366365 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "155", "Occupancy2": "101" }, "geometry": { "type": "Point", "coordinates": [ 30.541134382685431, 50.370956610967603 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "498", "Occupancy2": "101" }, "geometry": { "type": "Point", "coordinates": [ 30.452134, 50.379308 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "393", "Occupancy2": "101" }, "geometry": { "type": "Point", "coordinates": [ 30.450091, 50.379969 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "202", "Occupancy2": "100" }, "geometry": { "type": "Point", "coordinates": [ 30.562267, 50.329122 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "68", "Occupancy2": "100" }, "geometry": { "type": "Point", "coordinates": [ 30.533833, 50.345034524666097 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "97", "Occupancy2": "34" }, "geometry": { "type": "Point", "coordinates": [ 30.503828151609831, 50.438331228319726 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "138", "Occupancy2": "34" }, "geometry": { "type": "Point", "coordinates": [ 30.498201, 50.438713 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "113", "Occupancy2": "29" }, "geometry": { "type": "Point", "coordinates": [ 30.511522, 50.436853 ] } },
+{ "type": "Feature", "properties": { "q2wHide_Number": "212", "Occupancy2": "29" }, "geometry": { "type": "Point", "coordinates": [ 30.507506342952542, 50.437526591173054 ] } }
+]
+}

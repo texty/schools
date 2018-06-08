@@ -1,0 +1,31 @@
+var json_s_podil_30 = {
+"type": "FeatureCollection",
+"name": "s_podil_30",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "School": "Школа №2" }, "geometry": { "type": "Point", "coordinates": [ 30.4612782, 50.4903981 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №3" }, "geometry": { "type": "Point", "coordinates": [ 30.4139153, 50.5093075 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №6" }, "geometry": { "type": "Point", "coordinates": [ 30.4101393, 50.5121362 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №10" }, "geometry": { "type": "Point", "coordinates": [ 30.508761, 50.468662 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №17" }, "geometry": { "type": "Point", "coordinates": [ 30.507959, 50.4678642 ] } },
+{ "type": "Feature", "properties": { "School": "Гімназія №19 \"Межигірська\"" }, "geometry": { "type": "Point", "coordinates": [ 30.5161862, 50.4670165 ] } },
+{ "type": "Feature", "properties": { "School": "Гімназія \"Либідь\" №34" }, "geometry": { "type": "Point", "coordinates": [ 30.4317262, 50.5111684 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №45" }, "geometry": { "type": "Point", "coordinates": [ 30.4088197, 50.4920875 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №63" }, "geometry": { "type": "Point", "coordinates": [ 30.4071693, 50.485276 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №68" }, "geometry": { "type": "Point", "coordinates": [ 30.4340758, 50.4918368 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №93" }, "geometry": { "type": "Point", "coordinates": [ 30.4276209, 50.5161375 ] } },
+{ "type": "Feature", "properties": { "School": "Ліцей №100 \"Поділ\"" }, "geometry": { "type": "Point", "coordinates": [ 30.5169922, 50.4613943 ] } },
+{ "type": "Feature", "properties": { "School": "Гімназія №107 \"Введенська\"" }, "geometry": { "type": "Point", "coordinates": [ 30.5108241, 50.4728831 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №114" }, "geometry": { "type": "Point", "coordinates": [ 30.4779491, 50.4801216 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №118" }, "geometry": { "type": "Point", "coordinates": [ 30.4771006, 50.4842258 ] } },
+{ "type": "Feature", "properties": { "School": "Романо-германська гімназія №123" }, "geometry": { "type": "Point", "coordinates": [ 30.465116, 50.4869654 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №124" }, "geometry": { "type": "Point", "coordinates": [ 30.5198678, 50.4669659 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №156" }, "geometry": { "type": "Point", "coordinates": [ 30.4412237, 50.5085934 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №193" }, "geometry": { "type": "Point", "coordinates": [ 30.4310004, 50.5147179 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №242" }, "geometry": { "type": "Point", "coordinates": [ 30.4287559, 50.5061255 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №243" }, "geometry": { "type": "Point", "coordinates": [ 30.4325235, 50.499986 ] } },
+{ "type": "Feature", "properties": { "School": "Гімназія №257 \"Синьоозерна\"" }, "geometry": { "type": "Point", "coordinates": [ 30.4037773, 50.5112312 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №262" }, "geometry": { "type": "Point", "coordinates": [ 30.4364984, 50.5094851 ] } },
+{ "type": "Feature", "properties": { "School": "Школа №271" }, "geometry": { "type": "Point", "coordinates": [ 30.4450219, 50.5029706 ] } }
+]
+}
