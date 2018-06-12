@@ -177,12 +177,28 @@ body {
 /*Text*/
 
 h1 {
-  font-family: "Segoe UI Light", sans-serif;
-  margin: 0;
-  padding: 0;
-  font-size: 71pt;
-  line-height: 1;
-  font-weight: 100;
+  @media #{$brk-medium},
+  #{$brk-large},
+  #{$brk-xlarge} {
+    font-family: "Segoe UI Light", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 71pt;
+    line-height: 1;
+    font-weight: 100;
+  }
+
+
+  @media #{$brk-spnarrow},
+  #{$brk-mobile},
+  #{$brk-narrow}{
+    font-family: "Segoe UI Light", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 50pt;
+    line-height: 1;
+    font-weight: 100;
+  }
 }
 
 h2 {

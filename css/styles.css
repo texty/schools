@@ -122,13 +122,22 @@ body {
   width: 100%; }
 
 /*Text*/
-h1 {
-  font-family: "Segoe UI Light", sans-serif;
-  margin: 0;
-  padding: 0;
-  font-size: 71pt;
-  line-height: 1;
-  font-weight: 100; }
+@media (min-width: 1024px) and (max-width: 1285px), (min-width: 1286px) and (max-width: 1440px), (min-width: 1441px) and (max-width: 2570px) {
+  h1 {
+    font-family: "Segoe UI Light", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 71pt;
+    line-height: 1;
+    font-weight: 100; } }
+@media (min-width: 374px) and (max-width: 767px), (min-width: 0) and (max-width: 374px), (min-width: 767px) and (max-width: 1024px) {
+  h1 {
+    font-family: "Segoe UI Light", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 50pt;
+    line-height: 1;
+    font-weight: 100; } }
 
 h2 {
   font-family: "Segoe UI Bold", sans-serif;
