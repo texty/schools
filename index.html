@@ -89,7 +89,7 @@
 </div>
 
 
-    <div id="text">
+    <div class="text">
         <div id="subtitle-mob">
             <h3>Як працює нова система вступу до першого класу. Карта київських шкіл та будинків, які до них «приписані»</h3>
         </div>
@@ -158,7 +158,9 @@
         <p>Кожна школа ще в серпні-вересні доповість, скільки класів зможе відкрити на 2019-2020 навчальні роки. Відтак охочих дітей поділять між школами за територіями. Хто куди піде, стане відомо не пізніше, як за півроку до першого дзвоника. Тобто, вже у березні батькам можна буде писати заяви, а директорам – перевіряти вказані батьками місця проживання.</p>
         <p>Інтерактивна карта київських шкіл та приписаних до них будинків. В редакції виникло припущення, що школи з кращим рейтингом ЗНО змогли пролобіювати, аби їм було приписано менше адрес, щоб мати можливість відбирати учнів на вільні місця. Щоб побачити школи, які входять до ТОП-30 за рейтингом ЗНО, клікайте на кнопку «Найкращі школи»</p>
 
-
+</div>
+        <div id="map"> </div>
+<div class="text">
         <h2>В якому районі найкраще вчитися?</h2>
         <p> - На Осокорках, Позняках і Харківському - найбільші в Києві школи; тут учиться найбільше дітей, порівняно з іншими столичними масивами.</p>
         <p> -  В Деснянському районі - лише одна школа з ризиком перевантаження.</p>
@@ -237,59 +239,62 @@
 
     </div>
 
-    <!--<div id="map">-->
-    <!--</div>-->
+
         <script src="lib/share-behavior.js"></script>
-        <!--<script src="js/qgis2web_expressions.js"></script>-->
-        <!--<script src="js/leaflet.js"></script>-->
-        <!--<script src="js/leaflet.rotatedMarker.js"></script>-->
-        <!--<script src="js/leaflet.pattern.js"></script>-->
-        <!--<script src="js/leaflet-hash.js"></script>-->
-        <!--<script src="js/Autolinker.min.js"></script>-->
-        <!--<script src="js/rbush.min.js"></script>-->
-        <!--<script src="js/labelgun.min.js"></script>-->
-        <!--<script src="js/labels.js"></script>-->
-        <!--<script src="js/Control.OSMGeocoder.js"></script>-->
-        <!--<script src="data/Svyatoshynsky_area_houses3_1.js"></script>-->
-        <!--<script src="data/Svytoshynsky_area_connections3_2.js"></script>-->
-        <!--<script src="data/s_svyatosh_3.js"></script>-->
-        <!--<script src="data/Dnipro_houses_4.js"></script>-->
-        <!--<script src="data/Dnipro_area_connections4_5.js"></script>-->
-        <!--<script src="data/s_dnipro_6.js"></script>-->
-        <!--<script src="data/desnyansky_houses_7.js"></script>-->
-        <!--<script src="data/Desnyansjy_area_connections3_8.js"></script>-->
-        <!--<script src="data/s_desnyansky_9.js"></script>-->
-        <!--<script src="data/solomyansky_houses2_10.js"></script>-->
-        <!--<script src="data/Solomyansky_area_connections3_11.js"></script>-->
-        <!--<script src="data/s_solom_12.js"></script>-->
-        <!--<script src="data/Darnytsky_area_connections_13.js"></script>-->
-        <!--<script src="data/Darnytsky_houses_14.js"></script>-->
-        <!--<script src="data/s_darnyza_15.js"></script>-->
-        <!--<script src="data/Obolon_area_houses_16.js"></script>-->
-        <!--<script src="data/Obolon_area_connections3_17.js"></script>-->
-        <!--<script src="data/s_obolon_18.js"></script>-->
-        <!--<script src="data/Pechersky_area_connections2_19.js"></script>-->
-        <!--<script src="data/Pechersky_area_houses3_20.js"></script>-->
-        <!--<script src="data/s_pechersk_21.js"></script>-->
-        <!--<script src="data/Golosievsky_area_connections2_22.js"></script>-->
-        <!--<script src="data/Golosievsky_houses_23.js"></script>-->
-        <!--<script src="data/s_golosievo_24.js"></script>-->
-        <!--<script src="data/Shevchenkivsky_area_connections2_25.js"></script>-->
-        <!--<script src="data/Shevchenkivsky_area_houses2_26.js"></script>-->
-        <!--<script src="data/s_shev_27.js"></script>-->
-        <!--<script src="data/Podil_area_houses3_28.js"></script>-->
-        <!--<script src="data/Podil_area_connections4_29.js"></script>-->
-        <!--<script src="data/s_podil_30.js"></script>-->
-        <!--<script src="data/cap_darniza_31.js"></script>-->
-        <!--<script src="data/cap_dnipro_32.js"></script>-->
-        <!--<script src="data/cap_desn_33.js"></script>-->
-        <!--<script src="data/cap_podil_34.js"></script>-->
-        <!--<script src="data/cap_shev_35.js"></script>-->
-        <!--<script src="data/cap_pechersk_36.js"></script>-->
-        <!--<script src="data/cap_golos_37.js"></script>-->
-        <!--<script src="data/cap_solom_38.js"></script>-->
-        <!--<script src="data/cap_obolon_39.js"></script>-->
-        <!--<script src="data/cap_svyat_40.js"></script>-->
+        <script src="lib/jquery-2.1.4.min.js"></script>
+
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/Control.OSMGeocoder.js"></script>
+        <script src="data/Svyatoshynsky_area_houses3_1.js"></script>
+        <script src="data/Svytoshynsky_area_connections3_2.js"></script>
+        <script src="data/s_svyatosh_3.js"></script>
+        <script src="data/Dnipro_houses_4.js"></script>
+        <script src="data/Dnipro_area_connections4_5.js"></script>
+        <script src="data/s_dnipro_6.js"></script>
+        <script src="data/desnyansky_houses_7.js"></script>
+        <script src="data/Desnyansjy_area_connections3_8.js"></script>
+        <script src="data/s_desnyansky_9.js"></script>
+        <script src="data/solomyansky_houses2_10.js"></script>
+        <script src="data/Solomyansky_area_connections3_11.js"></script>
+        <script src="data/s_solom_12.js"></script>
+        <script src="data/Darnytsky_area_connections_13.js"></script>
+        <script src="data/Darnytsky_houses_14.js"></script>
+        <script src="data/s_darnyza_15.js"></script>
+        <script src="data/Obolon_area_houses_16.js"></script>
+        <script src="data/Obolon_area_connections3_17.js"></script>
+        <script src="data/s_obolon_18.js"></script>
+        <script src="data/Pechersky_area_connections2_19.js"></script>
+        <script src="data/Pechersky_area_houses3_20.js"></script>
+        <script src="data/s_pechersk_21.js"></script>
+        <script src="data/Golosievsky_area_connections2_22.js"></script>
+        <script src="data/Golosievsky_houses_23.js"></script>
+        <script src="data/s_golosievo_24.js"></script>
+        <script src="data/Shevchenkivsky_area_connections2_25.js"></script>
+        <script src="data/Shevchenkivsky_area_houses2_26.js"></script>
+        <script src="data/s_shev_27.js"></script>
+        <script src="data/Podil_area_houses3_28.js"></script>
+        <script src="data/Podil_area_connections4_29.js"></script>
+        <script src="data/s_podil_30.js"></script>
+        <script src="data/cap_darniza_31.js"></script>
+        <script src="data/cap_dnipro_32.js"></script>
+        <script src="data/cap_desn_33.js"></script>
+        <script src="data/cap_podil_34.js"></script>
+        <script src="data/cap_shev_35.js"></script>
+        <script src="data/cap_pechersk_36.js"></script>
+        <script src="data/cap_golos_37.js"></script>
+        <script src="data/cap_solom_38.js"></script>
+        <script src="data/cap_obolon_39.js"></script>
+        <script src="data/cap_svyat_40.js"></script>
+        <script src="js/IndexFileCode.js"></script>
+
 
 <h2 class="read-text"><b>Читайте також:</b></h2>
 <div class="read-more" style="margin:50px 0 100px 0;">

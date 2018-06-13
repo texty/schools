@@ -1,9 +1,7 @@
-/**
- * Created by yevheniia on 12.06.18.
- */
 var map = L.map('map', {
-    zoomControl:true, maxZoom:28, minZoom:1
+    zoomControl:true, maxZoom:28, minZoom:1, renderer: L.canvas()
 })
+var renderer = L.canvas();
 var hash = new L.Hash(map);
 map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
 var bounds_group = new L.featureGroup([]);
@@ -25,7 +23,6 @@ function pop_Svyatoshynsky_area_houses3_1(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Svyatoshynsky_area_houses3_1_0() {
     return {
         pane: 'pane_Svyatoshynsky_area_houses3_1',
@@ -34,6 +31,7 @@ function style_Svyatoshynsky_area_houses3_1_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(50,156,123,1.0)',
+        renderer: renderer
     }
 }
 map.createPane('pane_Svyatoshynsky_area_houses3_1');
@@ -97,7 +95,6 @@ function pop_Svytoshynsky_area_connections3_2(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Svytoshynsky_area_connections3_2_0() {
     return {
         pane: 'pane_Svytoshynsky_area_connections3_2',
@@ -108,6 +105,7 @@ function style_Svytoshynsky_area_connections3_2_0() {
         lineJoin: 'bevel',
         weight: 1.0,
         fillOpacity: 0,
+        renderer: renderer
     }
 }
 map.createPane('pane_Svytoshynsky_area_connections3_2');
@@ -129,7 +127,6 @@ function pop_s_svyatosh_3(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_s_svyatosh_3_0() {
     return {
         pane: 'pane_s_svyatosh_3',
@@ -138,6 +135,7 @@ function style_s_svyatosh_3_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,0,0,0.5019607843137255)',
+        renderer: renderer
     }
 }
 map.createPane('pane_s_svyatosh_3');
@@ -164,7 +162,6 @@ function pop_Dnipro_houses_4(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Dnipro_houses_4_0() {
     return {
         pane: 'pane_Dnipro_houses_4',
@@ -173,6 +170,7 @@ function style_Dnipro_houses_4_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(198,63,102,1.0)',
+        renderer: renderer
     }
 }
 map.createPane('pane_Dnipro_houses_4');
@@ -233,7 +231,6 @@ function pop_Dnipro_area_connections4_5(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Dnipro_area_connections4_5_0() {
     return {
         pane: 'pane_Dnipro_area_connections4_5',
@@ -244,6 +241,7 @@ function style_Dnipro_area_connections4_5_0() {
         lineJoin: 'bevel',
         weight: 1.0,
         fillOpacity: 0,
+        renderer: renderer
     }
 }
 map.createPane('pane_Dnipro_area_connections4_5');
@@ -265,7 +263,6 @@ function pop_s_dnipro_6(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_s_dnipro_6_0() {
     return {
         pane: 'pane_s_dnipro_6',
@@ -274,6 +271,7 @@ function style_s_dnipro_6_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,0,0,0.5019607843137255)',
+        renderer: renderer
     }
 }
 map.createPane('pane_s_dnipro_6');
@@ -300,7 +298,6 @@ function pop_desnyansky_houses_7(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_desnyansky_houses_7_0() {
     return {
         pane: 'pane_desnyansky_houses_7',
@@ -309,6 +306,7 @@ function style_desnyansky_houses_7_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,126,125,1.0)',
+        renderer: renderer
     }
 }
 map.createPane('pane_desnyansky_houses_7');
@@ -366,7 +364,6 @@ function pop_Desnyansjy_area_connections3_8(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Desnyansjy_area_connections3_8_0() {
     return {
         pane: 'pane_Desnyansjy_area_connections3_8',
@@ -377,6 +374,7 @@ function style_Desnyansjy_area_connections3_8_0() {
         lineJoin: 'bevel',
         weight: 1,
         fillOpacity: 0,
+        renderer: renderer
     }
 }
 map.createPane('pane_Desnyansjy_area_connections3_8');
@@ -398,7 +396,6 @@ function pop_s_desnyansky_9(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_s_desnyansky_9_0() {
     return {
         pane: 'pane_s_desnyansky_9',
@@ -407,6 +404,7 @@ function style_s_desnyansky_9_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,0,0,0.5019607843137255)',
+        renderer: renderer
     }
 }
 map.createPane('pane_s_desnyansky_9');
@@ -433,7 +431,6 @@ function pop_solomyansky_houses2_10(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_solomyansky_houses2_10_0() {
     return {
         pane: 'pane_solomyansky_houses2_10',
@@ -442,6 +439,7 @@ function style_solomyansky_houses2_10_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(177,176,82,1.0)',
+        renderer: renderer
     }
 }
 map.createPane('pane_solomyansky_houses2_10');
@@ -508,7 +506,6 @@ function pop_Solomyansky_area_connections3_11(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Solomyansky_area_connections3_11_0() {
     return {
         pane: 'pane_Solomyansky_area_connections3_11',
@@ -519,6 +516,7 @@ function style_Solomyansky_area_connections3_11_0() {
         lineJoin: 'bevel',
         weight: 1,
         fillOpacity: 0,
+        renderer: renderer
     }
 }
 map.createPane('pane_Solomyansky_area_connections3_11');
@@ -540,7 +538,6 @@ function pop_s_solom_12(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_s_solom_12_0() {
     return {
         pane: 'pane_s_solom_12',
@@ -549,6 +546,7 @@ function style_s_solom_12_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,0,0,0.5019607843137255)',
+        renderer: renderer
     }
 }
 map.createPane('pane_s_solom_12');
@@ -611,7 +609,6 @@ function pop_Darnytsky_area_connections_13(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Darnytsky_area_connections_13_0() {
     return {
         pane: 'pane_Darnytsky_area_connections_13',
@@ -622,6 +619,7 @@ function style_Darnytsky_area_connections_13_0() {
         lineJoin: 'bevel',
         weight: 1,
         fillOpacity: 0,
+        renderer: renderer
     }
 }
 map.createPane('pane_Darnytsky_area_connections_13');
@@ -643,7 +641,6 @@ function pop_Darnytsky_houses_14(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Darnytsky_houses_14_0() {
     return {
         pane: 'pane_Darnytsky_houses_14',
@@ -652,6 +649,7 @@ function style_Darnytsky_houses_14_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(90,97,176,1.0)',
+        renderer: renderer
     }
 }
 map.createPane('pane_Darnytsky_houses_14');
@@ -679,7 +677,6 @@ function pop_s_darnyza_15(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_s_darnyza_15_0() {
     return {
         pane: 'pane_s_darnyza_15',
@@ -688,6 +685,7 @@ function style_s_darnyza_15_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,0,0,0.5019607843137255)',
+        renderer: renderer
     }
 }
 map.createPane('pane_s_darnyza_15');
@@ -714,7 +712,6 @@ function pop_Obolon_area_houses_16(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Obolon_area_houses_16_0() {
     return {
         pane: 'pane_Obolon_area_houses_16',
@@ -723,6 +720,7 @@ function style_Obolon_area_houses_16_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(193,107,69,1.0)',
+        renderer: renderer
     }
 }
 map.createPane('pane_Obolon_area_houses_16');
@@ -783,7 +781,6 @@ function pop_Obolon_area_connections3_17(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Obolon_area_connections3_17_0() {
     return {
         pane: 'pane_Obolon_area_connections3_17',
@@ -794,6 +791,7 @@ function style_Obolon_area_connections3_17_0() {
         lineJoin: 'bevel',
         weight: 1,
         fillOpacity: 0,
+        renderer: renderer
     }
 }
 map.createPane('pane_Obolon_area_connections3_17');
@@ -815,7 +813,6 @@ function pop_s_obolon_18(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_s_obolon_18_0() {
     return {
         pane: 'pane_s_obolon_18',
@@ -824,6 +821,7 @@ function style_s_obolon_18_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,0,0,0.5019607843137255)',
+        renderer: renderer
     }
 }
 map.createPane('pane_s_obolon_18');
@@ -880,7 +878,6 @@ function pop_Pechersky_area_connections2_19(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Pechersky_area_connections2_19_0() {
     return {
         pane: 'pane_Pechersky_area_connections2_19',
@@ -891,6 +888,7 @@ function style_Pechersky_area_connections2_19_0() {
         lineJoin: 'bevel',
         weight: 1.0,
         fillOpacity: 0,
+        renderer: renderer
     }
 }
 map.createPane('pane_Pechersky_area_connections2_19');
@@ -912,7 +910,6 @@ function pop_Pechersky_area_houses3_20(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Pechersky_area_houses3_20_0() {
     return {
         pane: 'pane_Pechersky_area_houses3_20',
@@ -921,6 +918,7 @@ function style_Pechersky_area_houses3_20_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(20,175,202,1.0)',
+        renderer: renderer
     }
 }
 map.createPane('pane_Pechersky_area_houses3_20');
@@ -948,7 +946,6 @@ function pop_s_pechersk_21(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_s_pechersk_21_0() {
     return {
         pane: 'pane_s_pechersk_21',
@@ -957,6 +954,7 @@ function style_s_pechersk_21_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,0,0,0.5019607843137255)',
+        renderer: renderer
     }
 }
 map.createPane('pane_s_pechersk_21');
@@ -1022,7 +1020,6 @@ function pop_Golosievsky_area_connections2_22(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Golosievsky_area_connections2_22_0() {
     return {
         pane: 'pane_Golosievsky_area_connections2_22',
@@ -1033,6 +1030,7 @@ function style_Golosievsky_area_connections2_22_0() {
         lineJoin: 'bevel',
         weight: 1,
         fillOpacity: 0,
+        renderer: renderer
     }
 }
 map.createPane('pane_Golosievsky_area_connections2_22');
@@ -1054,7 +1052,6 @@ function pop_Golosievsky_houses_23(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Golosievsky_houses_23_0() {
     return {
         pane: 'pane_Golosievsky_houses_23',
@@ -1063,6 +1060,7 @@ function style_Golosievsky_houses_23_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(236,189,16,1.0)',
+        renderer: renderer
     }
 }
 map.createPane('pane_Golosievsky_houses_23');
@@ -1090,7 +1088,6 @@ function pop_s_golosievo_24(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_s_golosievo_24_0() {
     return {
         pane: 'pane_s_golosievo_24',
@@ -1099,6 +1096,7 @@ function style_s_golosievo_24_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,0,0,0.5019607843137255)',
+        renderer: renderer
     }
 }
 map.createPane('pane_s_golosievo_24');
@@ -1158,7 +1156,6 @@ function pop_Shevchenkivsky_area_connections2_25(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Shevchenkivsky_area_connections2_25_0() {
     return {
         pane: 'pane_Shevchenkivsky_area_connections2_25',
@@ -1169,6 +1166,7 @@ function style_Shevchenkivsky_area_connections2_25_0() {
         lineJoin: 'bevel',
         weight: 1,
         fillOpacity: 0,
+        renderer: renderer
     }
 }
 map.createPane('pane_Shevchenkivsky_area_connections2_25');
@@ -1190,7 +1188,6 @@ function pop_Shevchenkivsky_area_houses2_26(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Shevchenkivsky_area_houses2_26_0() {
     return {
         pane: 'pane_Shevchenkivsky_area_houses2_26',
@@ -1199,6 +1196,7 @@ function style_Shevchenkivsky_area_houses2_26_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(182,78,172,1.0)',
+        renderer: renderer
     }
 }
 map.createPane('pane_Shevchenkivsky_area_houses2_26');
@@ -1226,7 +1224,6 @@ function pop_s_shev_27(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_s_shev_27_0() {
     return {
         pane: 'pane_s_shev_27',
@@ -1235,6 +1232,7 @@ function style_s_shev_27_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,0,0,0.5019607843137255)',
+        renderer: renderer
     }
 }
 map.createPane('pane_s_shev_27');
@@ -1261,7 +1259,6 @@ function pop_Podil_area_houses3_28(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Podil_area_houses3_28_0() {
     return {
         pane: 'pane_Podil_area_houses3_28',
@@ -1270,6 +1267,7 @@ function style_Podil_area_houses3_28_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(81,81,203,1.0)',
+        renderer: renderer
     }
 }
 map.createPane('pane_Podil_area_houses3_28');
@@ -1336,7 +1334,6 @@ function pop_Podil_area_connections4_29(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_Podil_area_connections4_29_0() {
     return {
         pane: 'pane_Podil_area_connections4_29',
@@ -1347,6 +1344,7 @@ function style_Podil_area_connections4_29_0() {
         lineJoin: 'bevel',
         weight: 1,
         fillOpacity: 0,
+        renderer: renderer
     }
 }
 map.createPane('pane_Podil_area_connections4_29');
@@ -1368,7 +1366,6 @@ function pop_s_podil_30(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_s_podil_30_0() {
     return {
         pane: 'pane_s_podil_30',
@@ -1377,6 +1374,7 @@ function style_s_podil_30_0() {
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(0,0,0,0.5019607843137255)',
+        renderer: renderer
     }
 }
 map.createPane('pane_s_podil_30');
@@ -1403,7 +1401,6 @@ function pop_cap_darniza_31(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_cap_darniza_31_0(feature) {
     if (feature.properties['q2wHide_Number'] >= 23.000000 && feature.properties['q2wHide_Number'] <= 227.000000 ) {
         return {
@@ -1418,6 +1415,7 @@ function style_cap_darniza_31_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(90,97,176,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1433,6 +1431,7 @@ function style_cap_darniza_31_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(90,97,176,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1448,6 +1447,7 @@ function style_cap_darniza_31_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(90,97,176,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1463,6 +1463,7 @@ function style_cap_darniza_31_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(90,97,176,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1478,6 +1479,7 @@ function style_cap_darniza_31_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(90,97,176,1.0)',
+            renderer: renderer
         }
     }
 }
@@ -1506,7 +1508,6 @@ function pop_cap_dnipro_32(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_cap_dnipro_32_0(feature) {
     if (feature.properties['q2wHide_Number'] >= 23.000000 && feature.properties['q2wHide_Number'] <= 227.000000 ) {
         return {
@@ -1521,6 +1522,7 @@ function style_cap_dnipro_32_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(198,63,102,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1536,6 +1538,7 @@ function style_cap_dnipro_32_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(198,63,102,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1551,6 +1554,7 @@ function style_cap_dnipro_32_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(198,63,102,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1566,6 +1570,7 @@ function style_cap_dnipro_32_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(198,63,102,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1581,6 +1586,7 @@ function style_cap_dnipro_32_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(198,63,102,1.0)',
+            renderer: renderer
         }
     }
 }
@@ -1609,7 +1615,6 @@ function pop_cap_desn_33(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_cap_desn_33_0(feature) {
     if (feature.properties['q2wHide_Number'] >= 23.000000 && feature.properties['q2wHide_Number'] <= 227.000000 ) {
         return {
@@ -1624,6 +1629,7 @@ function style_cap_desn_33_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(0,126,125,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1639,6 +1645,7 @@ function style_cap_desn_33_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(0,126,125,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1654,6 +1661,7 @@ function style_cap_desn_33_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(0,126,125,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1669,6 +1677,7 @@ function style_cap_desn_33_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(0,126,125,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1684,6 +1693,7 @@ function style_cap_desn_33_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(0,126,125,1.0)',
+            renderer: renderer
         }
     }
 }
@@ -1712,7 +1722,6 @@ function pop_cap_podil_34(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_cap_podil_34_0(feature) {
     if (feature.properties['q2wHide_Number'] >= 23.000000 && feature.properties['q2wHide_Number'] <= 227.000000 ) {
         return {
@@ -1727,6 +1736,7 @@ function style_cap_podil_34_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(81,81,203,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1742,6 +1752,7 @@ function style_cap_podil_34_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(81,81,203,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1757,6 +1768,7 @@ function style_cap_podil_34_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(81,81,203,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1772,6 +1784,7 @@ function style_cap_podil_34_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(81,81,203,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1787,6 +1800,7 @@ function style_cap_podil_34_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(81,81,203,1.0)',
+            renderer: renderer
         }
     }
 }
@@ -1815,7 +1829,6 @@ function pop_cap_shev_35(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_cap_shev_35_0(feature) {
     if (feature.properties['q2wHide_Number'] >= 23.000000 && feature.properties['q2wHide_Number'] <= 227.000000 ) {
         return {
@@ -1830,6 +1843,7 @@ function style_cap_shev_35_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(182,78,172,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1845,6 +1859,7 @@ function style_cap_shev_35_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(182,78,172,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1860,6 +1875,7 @@ function style_cap_shev_35_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(182,78,172,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1875,6 +1891,7 @@ function style_cap_shev_35_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(182,78,172,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1890,6 +1907,7 @@ function style_cap_shev_35_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(182,78,172,1.0)',
+            renderer: renderer
         }
     }
 }
@@ -1918,7 +1936,6 @@ function pop_cap_pechersk_36(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_cap_pechersk_36_0(feature) {
     if (feature.properties['q2wHide_Number'] >= 23.000000 && feature.properties['q2wHide_Number'] <= 227.000000 ) {
         return {
@@ -1933,6 +1950,7 @@ function style_cap_pechersk_36_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(20,175,202,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1948,6 +1966,7 @@ function style_cap_pechersk_36_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(20,175,202,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1963,6 +1982,7 @@ function style_cap_pechersk_36_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(20,175,202,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1978,6 +1998,7 @@ function style_cap_pechersk_36_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(20,175,202,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1993,6 +2014,7 @@ function style_cap_pechersk_36_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(20,175,202,1.0)',
+            renderer: renderer
         }
     }
 }
@@ -2021,7 +2043,6 @@ function pop_cap_golos_37(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_cap_golos_37_0(feature) {
     if (feature.properties['q2wHide_Number'] >= 23.000000 && feature.properties['q2wHide_Number'] <= 227.000000 ) {
         return {
@@ -2036,6 +2057,7 @@ function style_cap_golos_37_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(236,189,16,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -2051,6 +2073,7 @@ function style_cap_golos_37_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(236,189,16,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -2066,6 +2089,7 @@ function style_cap_golos_37_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(236,189,16,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -2081,6 +2105,7 @@ function style_cap_golos_37_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(236,189,16,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -2096,6 +2121,7 @@ function style_cap_golos_37_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(236,189,16,1.0)',
+            renderer: renderer
         }
     }
 }
@@ -2124,7 +2150,6 @@ function pop_cap_solom_38(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_cap_solom_38_0(feature) {
     if (feature.properties['q2wHide_Number'] >= 23.000000 && feature.properties['q2wHide_Number'] <= 227.000000 ) {
         return {
@@ -2139,6 +2164,7 @@ function style_cap_solom_38_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(177,176,82,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -2154,6 +2180,7 @@ function style_cap_solom_38_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(177,176,82,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -2169,6 +2196,7 @@ function style_cap_solom_38_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(177,176,82,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -2184,6 +2212,7 @@ function style_cap_solom_38_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(177,176,82,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -2199,6 +2228,7 @@ function style_cap_solom_38_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(177,176,82,1.0)',
+            renderer: renderer
         }
     }
 }
@@ -2227,7 +2257,6 @@ function pop_cap_obolon_39(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_cap_obolon_39_0(feature) {
     if (feature.properties['q2wHide_Number'] >= 23.000000 && feature.properties['q2wHide_Number'] <= 227.000000 ) {
         return {
@@ -2242,6 +2271,7 @@ function style_cap_obolon_39_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(193,107,69,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -2257,6 +2287,7 @@ function style_cap_obolon_39_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(193,107,69,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -2272,6 +2303,7 @@ function style_cap_obolon_39_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(193,107,69,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -2287,6 +2319,7 @@ function style_cap_obolon_39_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(193,107,69,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -2302,6 +2335,7 @@ function style_cap_obolon_39_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(193,107,69,1.0)',
+            v
         }
     }
 }
@@ -2330,7 +2364,6 @@ function pop_cap_svyat_40(feature, layer) {
                 </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
 }
-
 function style_cap_svyat_40_0(feature) {
     if (feature.properties['q2wHide_Number'] >= 23.000000 && feature.properties['q2wHide_Number'] <= 227.000000 ) {
         return {
@@ -2345,6 +2378,7 @@ function style_cap_svyat_40_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(50,156,123,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -2360,6 +2394,7 @@ function style_cap_svyat_40_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(50,156,123,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -2375,6 +2410,7 @@ function style_cap_svyat_40_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(50,156,123,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -2390,6 +2426,7 @@ function style_cap_svyat_40_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(50,156,123,1.0)',
+            renderer: renderer
         }
     }
     if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -2405,6 +2442,7 @@ function style_cap_svyat_40_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(50,156,123,1.0)',
+            renderer: renderer
         }
     }
 }
@@ -2534,7 +2572,7 @@ var osmGeocoder = new L.Control.OSMGeocoder({
 });
 osmGeocoder.addTo(map);
 var baseMaps = {};
-L.control.layers(baseMaps,{'Потужність школи (кількість учнів 1-4 класів)<br /><table><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_23000022700000.png" /></td><td> 23 - 227 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_227000043100001.png" /></td><td> 227 - 431 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_431000063500002.png" /></td><td> 431 - 635 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_635000083900003.png" /></td><td> 635 - 839 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_8390000104300004.png" /></td><td> 839 - 1043 <br> <br> При кліку по школі, покаується відсоток її завантаженості. <br> Відсутність кола свідчить про відсутність таких даних </td></tr></table>': layer_cap_svyat_40},{collapsed:false}).addTo(map);
+L.control.layers(baseMaps,{'Потужність школи (кількість учнів 1-4 класів)<br /><table><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_23000022700000.png" /></td><td> 23 - 227 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_227000043100001.png" /></td><td> 227 - 431 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_431000063500002.png" /></td><td> 431 - 635 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_635000083900003.png" /></td><td> 635 - 839 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_8390000104300004.png" /></td><td> 839 - 1043 </td></tr></table>При кліку по школі, покаується відсоток її завантаженості. <br> Відсутність кола свідчить про відсутність таких даних': layer_cap_svyat_40},{collapsed:false}).addTo(map);
 setBounds();
 var i = 0;
 layer_s_svyatosh_3.eachLayer(function(layer) {
