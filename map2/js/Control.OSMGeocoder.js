@@ -113,7 +113,7 @@ L.Control.OSMGeocoder = L.Control.extend({
 
 	_geocode : function (event) {
 		L.DomEvent.preventDefault(event);
-		var q = "київ, " + this._input.value;
+		var q = this._input.value;
 		//try to find corrdinates
 		if (this._isLatLon(q) != null)
 		{
@@ -148,7 +148,7 @@ L.Control.OSMGeocoder = L.Control.extend({
 		/* Set up params to send to Nominatim */
 		var params = {
 			// Defaults
-			q: "київ, " + this._input.value,
+			q: this._input.value,
 			json_callback : ("_l_osmgeocoder_"+this._callbackId++),
 			format: 'json'
 		};
