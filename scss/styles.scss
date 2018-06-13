@@ -24,6 +24,24 @@ $brk-mobile: '(min-width: 0) and (max-width: 374px)';
   padding: 0;
   margin: 0;
 }
+
+#mymap {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  //display:none;
+}
+
+//#button1, #button2 {
+//  margin-bottom: -20px;
+//}
+
+#button2 {
+  display:none;
+}
+
+
 /* Style */
 
 body {

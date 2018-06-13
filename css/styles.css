@@ -143,6 +143,15 @@ ul.links3 li a#orange {
   padding: 0;
   margin: 0; }
 
+#mymap {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0; }
+
+#button2 {
+  display: none; }
+
 /* Style */
 body {
   background-color: #f4eac7;
