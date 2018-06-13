@@ -74,8 +74,10 @@
         <script src="data/cap_svyat_40.js"></script>
         <script>
         var map = L.map('map', {
-            zoomControl:true, maxZoom:28, minZoom:1
+            zoomControl:true, maxZoom:28, minZoom:1, renderer: L.canvas()
         })
+        var renderer = L.canvas();
+
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
         var bounds_group = new L.featureGroup([]);
@@ -89,6 +91,7 @@
         });
         overlay_NEW_0.addTo(map);
         map.addLayer(overlay_NEW_0);
+
         function pop_Svyatoshynsky_area_houses3_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -106,6 +109,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(50,156,123,1.0)',
+                renderer: renderer
             }
         }
         map.createPane('pane_Svyatoshynsky_area_houses3_1');
@@ -125,6 +129,7 @@
         });
         bounds_group.addLayer(layer_Svyatoshynsky_area_houses3_1);
         map.addLayer(layer_Svyatoshynsky_area_houses3_1);
+
         function pop_Svytoshynsky_area_connections3_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -180,6 +185,7 @@
                 lineJoin: 'bevel',
                 weight: 1.0,
                 fillOpacity: 0,
+                renderer: renderer
             }
         }
         map.createPane('pane_Svytoshynsky_area_connections3_2');
@@ -210,6 +216,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,0.5019607843137255)',
+                renderer: renderer
             }
         }
         map.createPane('pane_s_svyatosh_3');
@@ -245,6 +252,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(198,63,102,1.0)',
+                renderer: renderer
             }
         }
         map.createPane('pane_Dnipro_houses_4');
@@ -316,6 +324,7 @@
                 lineJoin: 'bevel',
                 weight: 1.0,
                 fillOpacity: 0,
+                renderer: renderer
             }
         }
         map.createPane('pane_Dnipro_area_connections4_5');
@@ -346,6 +355,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,0.5019607843137255)',
+                renderer: renderer
             }
         }
         map.createPane('pane_s_dnipro_6');
@@ -381,6 +391,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,126,125,1.0)',
+                renderer: renderer
             }
         }
         map.createPane('pane_desnyansky_houses_7');
@@ -449,6 +460,7 @@
                 lineJoin: 'bevel',
                 weight: 1,
                 fillOpacity: 0,
+                renderer: renderer
             }
         }
         map.createPane('pane_Desnyansjy_area_connections3_8');
@@ -479,6 +491,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,0.5019607843137255)',
+                renderer: renderer
             }
         }
         map.createPane('pane_s_desnyansky_9');
@@ -514,6 +527,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(177,176,82,1.0)',
+                renderer: renderer
             }
         }
         map.createPane('pane_solomyansky_houses2_10');
@@ -591,6 +605,7 @@
                 lineJoin: 'bevel',
                 weight: 1,
                 fillOpacity: 0,
+                renderer: renderer
             }
         }
         map.createPane('pane_Solomyansky_area_connections3_11');
@@ -621,6 +636,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,0.5019607843137255)',
+                renderer: renderer
             }
         }
         map.createPane('pane_s_solom_12');
@@ -694,6 +710,7 @@
                 lineJoin: 'bevel',
                 weight: 1,
                 fillOpacity: 0,
+                renderer: renderer
             }
         }
         map.createPane('pane_Darnytsky_area_connections_13');
@@ -724,6 +741,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(90,97,176,1.0)',
+                renderer: renderer
             }
         }
         map.createPane('pane_Darnytsky_houses_14');
@@ -760,6 +778,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,0.5019607843137255)',
+                renderer: renderer
             }
         }
         map.createPane('pane_s_darnyza_15');
@@ -795,6 +814,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(193,107,69,1.0)',
+                renderer: renderer
             }
         }
         map.createPane('pane_Obolon_area_houses_16');
@@ -866,6 +886,7 @@
                 lineJoin: 'bevel',
                 weight: 1,
                 fillOpacity: 0,
+                renderer: renderer
             }
         }
         map.createPane('pane_Obolon_area_connections3_17');
@@ -896,6 +917,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,0.5019607843137255)',
+                renderer: renderer
             }
         }
         map.createPane('pane_s_obolon_18');
@@ -963,6 +985,7 @@
                 lineJoin: 'bevel',
                 weight: 1.0,
                 fillOpacity: 0,
+                renderer: renderer
             }
         }
         map.createPane('pane_Pechersky_area_connections2_19');
@@ -993,6 +1016,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(20,175,202,1.0)',
+                renderer: renderer
             }
         }
         map.createPane('pane_Pechersky_area_houses3_20');
@@ -1029,6 +1053,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,0.5019607843137255)',
+                renderer: renderer
             }
         }
         map.createPane('pane_s_pechersk_21');
@@ -1105,6 +1130,7 @@
                 lineJoin: 'bevel',
                 weight: 1,
                 fillOpacity: 0,
+                renderer: renderer
             }
         }
         map.createPane('pane_Golosievsky_area_connections2_22');
@@ -1135,6 +1161,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(236,189,16,1.0)',
+                renderer: renderer
             }
         }
         map.createPane('pane_Golosievsky_houses_23');
@@ -1171,6 +1198,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,0.5019607843137255)',
+                renderer: renderer
             }
         }
         map.createPane('pane_s_golosievo_24');
@@ -1241,6 +1269,7 @@
                 lineJoin: 'bevel',
                 weight: 1,
                 fillOpacity: 0,
+                renderer: renderer
             }
         }
         map.createPane('pane_Shevchenkivsky_area_connections2_25');
@@ -1271,6 +1300,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(182,78,172,1.0)',
+                renderer: renderer
             }
         }
         map.createPane('pane_Shevchenkivsky_area_houses2_26');
@@ -1307,6 +1337,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,0.5019607843137255)',
+                renderer: renderer
             }
         }
         map.createPane('pane_s_shev_27');
@@ -1342,6 +1373,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(81,81,203,1.0)',
+                renderer: renderer
             }
         }
         map.createPane('pane_Podil_area_houses3_28');
@@ -1419,6 +1451,7 @@
                 lineJoin: 'bevel',
                 weight: 1,
                 fillOpacity: 0,
+                renderer: renderer
             }
         }
         map.createPane('pane_Podil_area_connections4_29');
@@ -1449,6 +1482,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,0.5019607843137255)',
+                renderer: renderer
             }
         }
         map.createPane('pane_s_podil_30');
@@ -1490,6 +1524,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(90,97,176,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1505,6 +1540,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(90,97,176,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1520,6 +1556,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(90,97,176,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1535,6 +1572,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(90,97,176,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1550,6 +1588,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(90,97,176,1.0)',
+                    renderer: renderer
             }
             }
         }
@@ -1593,6 +1632,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(198,63,102,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1608,6 +1648,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(198,63,102,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1623,6 +1664,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(198,63,102,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1638,6 +1680,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(198,63,102,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1653,6 +1696,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(198,63,102,1.0)',
+                    renderer: renderer
             }
             }
         }
@@ -1696,6 +1740,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,126,125,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1711,6 +1756,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,126,125,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1726,6 +1772,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,126,125,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1741,6 +1788,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,126,125,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1756,6 +1804,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,126,125,1.0)',
+                    renderer: renderer
             }
             }
         }
@@ -1799,6 +1848,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(81,81,203,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1814,6 +1864,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(81,81,203,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1829,6 +1880,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(81,81,203,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1844,6 +1896,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(81,81,203,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1859,6 +1912,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(81,81,203,1.0)',
+                    renderer: renderer
             }
             }
         }
@@ -1902,6 +1956,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(182,78,172,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -1917,6 +1972,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(182,78,172,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -1932,6 +1988,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(182,78,172,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -1947,6 +2004,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(182,78,172,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -1962,6 +2020,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(182,78,172,1.0)',
+                    renderer: renderer
             }
             }
         }
@@ -2005,6 +2064,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(20,175,202,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -2020,6 +2080,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(20,175,202,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -2035,6 +2096,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(20,175,202,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -2050,6 +2112,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(20,175,202,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -2065,6 +2128,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(20,175,202,1.0)',
+                    renderer: renderer
             }
             }
         }
@@ -2108,6 +2172,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(236,189,16,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -2123,6 +2188,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(236,189,16,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -2138,6 +2204,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(236,189,16,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -2153,6 +2220,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(236,189,16,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -2168,6 +2236,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(236,189,16,1.0)',
+                    renderer: renderer
             }
             }
         }
@@ -2211,6 +2280,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(177,176,82,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -2226,6 +2296,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(177,176,82,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -2241,6 +2312,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(177,176,82,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -2256,6 +2328,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(177,176,82,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -2271,6 +2344,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(177,176,82,1.0)',
+                    renderer: renderer
             }
             }
         }
@@ -2314,6 +2388,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(193,107,69,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -2329,6 +2404,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(193,107,69,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -2344,6 +2420,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(193,107,69,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -2359,6 +2436,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(193,107,69,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -2374,6 +2452,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(193,107,69,1.0)',
+                    v
             }
             }
         }
@@ -2417,6 +2496,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(50,156,123,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 227.000000 && feature.properties['q2wHide_Number'] <= 431.000000 ) {
@@ -2432,6 +2512,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(50,156,123,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 431.000000 && feature.properties['q2wHide_Number'] <= 635.000000 ) {
@@ -2447,6 +2528,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(50,156,123,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 635.000000 && feature.properties['q2wHide_Number'] <= 839.000000 ) {
@@ -2462,6 +2544,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(50,156,123,1.0)',
+                    renderer: renderer
             }
             }
             if (feature.properties['q2wHide_Number'] >= 839.000000 && feature.properties['q2wHide_Number'] <= 1043.000000 ) {
@@ -2477,6 +2560,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(50,156,123,1.0)',
+                    renderer: renderer
             }
             }
         }
