@@ -2568,7 +2568,7 @@ if (map.getZoom() <= 19 && map.getZoom() >= 14) {
 var osmGeocoder = new L.Control.OSMGeocoder({
     collapsed: false,
     position: 'topright',
-    text: 'Search',
+    text: 'пошук за адресою',
 });
 osmGeocoder.addTo(map);
 var baseMaps = {};
