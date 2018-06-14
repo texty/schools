@@ -3,8 +3,8 @@ var map = L.map('map', {
 })
 
 map.scrollWheelZoom.disable();
-// map.on('focus', () => { map.scrollWheelZoom.enable(); });
-// map.on('blur', () => { map.scrollWheelZoom.disable(); });
+map.on('focus', () => { map.scrollWheelZoom.enable(); });
+map.on('blur', () => { map.scrollWheelZoom.disable(); });
 
 var visible;
 

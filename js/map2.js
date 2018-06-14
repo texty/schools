@@ -6,6 +6,9 @@ var mymap = L.map('mymap', {
 })
 
 mymap.scrollWheelZoom.disable();
+mymap.on('focus', () => { map.scrollWheelZoom.enable(); });
+mymap.on('blur', () => { map.scrollWheelZoom.disable(); });
+
 mymap.on('zoomend', function (e) {
     // Check zoom level
     if (map.getZoom() < 14) {
