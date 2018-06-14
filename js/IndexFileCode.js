@@ -1,6 +1,11 @@
 var map = L.map('map', {
     zoomControl:true, maxZoom:28, minZoom:1, renderer: L.canvas()
 })
+
+map.scrollWheelZoom.disable();
+map.on('focus', () => { map.scrollWheelZoom.enable(); });
+map.on('blur', () => { map.scrollWheelZoom.disable(); });
+
 var renderer = L.canvas();
 var hash = new L.Hash(map);
 map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');

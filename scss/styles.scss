@@ -33,6 +33,30 @@ $brk-mobile: '(min-width: 0) and (max-width: 374px)';
   //display:none;
 }
 
+.map-text{
+  margin-bottom: 30px;
+  background-color: #f8f8f9;
+}
+
+.map-text-p {
+
+  @media #{$brk-medium},
+  #{$brk-large},
+  #{$brk-xlarge} {
+    margin-left: 25%;
+    width:50%;
+  }
+
+  @media #{$brk-spnarrow},
+  #{$brk-mobile},
+  #{$brk-narrow}{
+    margin-left: 5%;
+    width:90%;
+
+  }
+
+}
+
 
 
 
