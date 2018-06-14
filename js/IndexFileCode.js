@@ -6,6 +6,22 @@ map.scrollWheelZoom.disable();
 map.on('focus', () => { map.scrollWheelZoom.enable(); });
 map.on('blur', () => { map.scrollWheelZoom.disable(); });
 
+var visible;
+
+
+map.on('zoomend', function (e) {
+    console.log(map.getZoom());
+    // Check zoom level
+    if (map.getZoom() < 14) {
+
+      $('.leaflet-tooltip').css("display", "none")
+
+    } else {
+        $('.leaflet-tooltip').css("display", "block")
+    }
+});
+
+
 var renderer = L.canvas();
 var hash = new L.Hash(map);
 map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
