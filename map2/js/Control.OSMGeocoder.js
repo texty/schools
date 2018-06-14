@@ -48,8 +48,8 @@ L.Control.OSMGeocoder = L.Control.extend({
 		submit.type = "submit";
 		submit.value = this.options.text;
 
-		form.appendChild(input);
-		form.appendChild(submit);
+		// form.appendChild(input);
+		// form.appendChild(submit);
 
 		L.DomEvent.addListener(form, 'submit', this._geocode, this);
 
