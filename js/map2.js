@@ -5,6 +5,7 @@ var mymap = L.map('mymap', {
     zoomControl:true, maxZoom:16, minZoom:11, renderer: L.canvas()
 })
 
+mymap.scrollWheelZoom.disable();
 mymap.on('zoomend', function (e) {
     // Check zoom level
     if (map.getZoom() < 14) {
