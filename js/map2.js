@@ -2,7 +2,7 @@
  * Created by yevheniia on 13.06.18.
  */
 var mymap = L.map('mymap', {
-    zoomControl:true, maxZoom:28, minZoom:1, renderer: L.canvas()
+    zoomControl:true, maxZoom:16, minZoom:11, renderer: L.canvas()
 })
 
 var renderer = L.canvas();
