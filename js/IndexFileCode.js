@@ -1,5 +1,5 @@
 var map = L.map('map', {
-    zoomControl:true, maxZoom:16, minZoom:13, renderer: L.canvas()
+    zoomControl:true, maxZoom:16, minZoom:11, renderer: L.canvas()
 })
 
 map.scrollWheelZoom.disable();
@@ -10,10 +10,9 @@ var visible;
 
 
 map.on('zoomend', function (e) {
-    console.log(map.getZoom());
     // Check zoom level
     if (map.getZoom() < 14) {
-
+      console.log(map.getZoom())
       $('.leaflet-tooltip').css("display", "none")
 
     } else {
@@ -2593,7 +2592,7 @@ var osmGeocoder = new L.Control.OSMGeocoder({
 });
 osmGeocoder.addTo(map);
 var baseMaps = {};
-L.control.layers(baseMaps,{'<b>Потужність школи (кількість учнів 1-4 класів)</b><br /><table><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_23000022700000.png" /></td><td> 23 - 227 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_227000043100001.png" /></td><td> 227 - 431 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_431000063500002.png" /></td><td> 431 - 635 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_635000083900003.png" /></td><td> 635 - 839 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_8390000104300004.png" /></td><td> 839 - 1043 </td></tr></table>При кліку по школі, покаується відсоток її завантаженості. <br> Відсутність кола свідчить про відсутність таких даних': layer_cap_svyat_40},{collapsed:false}).addTo(map);
+L.control.layers(baseMaps,{'Потужність школи (кількість учнів 1-4 класів)<br /><table><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_23000022700000.png" /></td><td> 23 - 227 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_227000043100001.png" /></td><td> 227 - 431 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_431000063500002.png" /></td><td> 431 - 635 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_635000083900003.png" /></td><td> 635 - 839 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_8390000104300004.png" /></td><td> 839 - 1043 </td></tr></table>При кліку по школі, покаується відсоток її завантаженості. <br> Відсутність кола свідчить про відсутність таких даних': layer_cap_svyat_40},{collapsed:false}).addTo(map);
 setBounds();
 var i = 0;
 layer_s_svyatosh_3.eachLayer(function(layer) {

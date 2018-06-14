@@ -2,8 +2,19 @@
  * Created by yevheniia on 13.06.18.
  */
 var mymap = L.map('mymap', {
-    zoomControl:true, maxZoom:16, minZoom:13, renderer: L.canvas()
+    zoomControl:true, maxZoom:16, minZoom:11, renderer: L.canvas()
 })
+
+mymap.on('zoomend', function (e) {
+    // Check zoom level
+    if (map.getZoom() < 14) {
+        console.log(map.getZoom())
+        $('.leaflet-tooltip').css("display", "none")
+
+    } else {
+        $('.leaflet-tooltip').css("display", "block")
+    }
+});
 
 var renderer = L.canvas();
 
@@ -2265,95 +2276,95 @@ var layer_cap_svyat_36 = new L.geoJson(json_cap_svyat_36, {
 bounds_group.addLayer(layer_cap_svyat_36);
 mymap.addLayer(layer_cap_svyat_36);
 mymap.on("zoomend", function(e) {
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
         mymap.addLayer(layer_s_svyatosh_3);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
         mymap.removeLayer(layer_s_svyatosh_3);
     }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
         mymap.addLayer(layer_s_dnipro_6);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
         mymap.removeLayer(layer_s_dnipro_6);
     }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
         mymap.addLayer(layer_s_solom_9);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
         mymap.removeLayer(layer_s_solom_9);
     }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
         mymap.addLayer(layer_s_darnyza_12);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
         mymap.removeLayer(layer_s_darnyza_12);
     }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
         mymap.addLayer(layer_s_obolon_15);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
         mymap.removeLayer(layer_s_obolon_15);
     }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
         mymap.addLayer(layer_s_pechersk_18);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
         mymap.removeLayer(layer_s_pechersk_18);
     }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
         mymap.addLayer(layer_s_golosievo_21);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
         mymap.removeLayer(layer_s_golosievo_21);
     }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
         mymap.addLayer(layer_s_shev_24);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
         mymap.removeLayer(layer_s_shev_24);
     }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
         mymap.addLayer(layer_s_podil_27);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
         mymap.removeLayer(layer_s_podil_27);
     }
 });
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
     mymap.addLayer(layer_s_svyatosh_3);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
     mymap.removeLayer(layer_s_svyatosh_3);
 }
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
     mymap.addLayer(layer_s_dnipro_6);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
     mymap.removeLayer(layer_s_dnipro_6);
 }
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
     mymap.addLayer(layer_s_solom_9);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
     mymap.removeLayer(layer_s_solom_9);
 }
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
     mymap.addLayer(layer_s_darnyza_12);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
     mymap.removeLayer(layer_s_darnyza_12);
 }
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
     mymap.addLayer(layer_s_obolon_15);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
     mymap.removeLayer(layer_s_obolon_15);
 }
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
     mymap.addLayer(layer_s_pechersk_18);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
     mymap.removeLayer(layer_s_pechersk_18);
 }
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
     mymap.addLayer(layer_s_golosievo_21);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
     mymap.removeLayer(layer_s_golosievo_21);
 }
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
     mymap.addLayer(layer_s_shev_24);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
     mymap.removeLayer(layer_s_shev_24);
 }
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 12) {
+if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
     mymap.addLayer(layer_s_podil_27);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 12) {
+} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
     mymap.removeLayer(layer_s_podil_27);
 }
 var osmGeocoder = new L.Control.OSMGeocoder({
