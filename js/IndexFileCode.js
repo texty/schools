@@ -1,5 +1,5 @@
 var map = L.map('map', {
-    zoomControl:true, maxZoom:16, minZoom:11, renderer: L.canvas()
+    zoomControl:true, maxZoom:16, minZoom:13, renderer: L.canvas()
 })
 
 map.scrollWheelZoom.disable();
