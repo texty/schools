@@ -2355,7 +2355,8 @@ function style_cap_obolon_39_0(feature) {
             fill: true,
             fillOpacity: 1,
             fillColor: 'rgba(193,107,69,1.0)',
-            v
+            renderer: renderer
+
         }
     }
 }
@@ -2483,108 +2484,19 @@ var layer_cap_svyat_40 = new L.geoJson(json_cap_svyat_40, {
 });
 bounds_group.addLayer(layer_cap_svyat_40);
 map.addLayer(layer_cap_svyat_40);
-map.on("zoomend", function(e) {
-    if (map.getZoom() <= 19 && map.getZoom() >= 14) {
+
         map.addLayer(layer_s_svyatosh_3);
-    } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-        map.removeLayer(layer_s_svyatosh_3);
-    }
-    if (map.getZoom() <= 19 && map.getZoom() >= 14) {
         map.addLayer(layer_s_dnipro_6);
-    } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-        map.removeLayer(layer_s_dnipro_6);
-    }
-    if (map.getZoom() <= 19 && map.getZoom() >= 14) {
         map.addLayer(layer_s_desnyansky_9);
-    } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-        map.removeLayer(layer_s_desnyansky_9);
-    }
-    if (map.getZoom() <= 19 && map.getZoom() >= 14) {
         map.addLayer(layer_s_solom_12);
-    } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-        map.removeLayer(layer_s_solom_12);
-    }
-    if (map.getZoom() <= 19 && map.getZoom() >= 14) {
         map.addLayer(layer_s_darnyza_15);
-    } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-        map.removeLayer(layer_s_darnyza_15);
-    }
-    if (map.getZoom() <= 19 && map.getZoom() >= 14) {
         map.addLayer(layer_s_obolon_18);
-    } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-        map.removeLayer(layer_s_obolon_18);
-    }
-    if (map.getZoom() <= 19 && map.getZoom() >= 14) {
         map.addLayer(layer_s_pechersk_21);
-    } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-        map.removeLayer(layer_s_pechersk_21);
-    }
-    if (map.getZoom() <= 19 && map.getZoom() >= 14) {
         map.addLayer(layer_s_golosievo_24);
-    } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-        map.removeLayer(layer_s_golosievo_24);
-    }
-    if (map.getZoom() <= 19 && map.getZoom() >= 14) {
         map.addLayer(layer_s_shev_27);
-    } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-        map.removeLayer(layer_s_shev_27);
-    }
-    if (map.getZoom() <= 19 && map.getZoom() >= 14) {
         map.addLayer(layer_s_podil_30);
-    } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-        map.removeLayer(layer_s_podil_30);
-    }
-});
-if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-    map.addLayer(layer_s_svyatosh_3);
-} else if (map.getZoom() > 19 || map.getZoom() < 14) {
-    map.removeLayer(layer_s_svyatosh_3);
-}
-if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-    map.addLayer(layer_s_dnipro_6);
-} else if (map.getZoom() > 19 || map.getZoom() < 14) {
-    map.removeLayer(layer_s_dnipro_6);
-}
-if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-    map.addLayer(layer_s_desnyansky_9);
-} else if (map.getZoom() > 19 || map.getZoom() < 14) {
-    map.removeLayer(layer_s_desnyansky_9);
-}
-if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-    map.addLayer(layer_s_solom_12);
-} else if (map.getZoom() > 19 || map.getZoom() < 14) {
-    map.removeLayer(layer_s_solom_12);
-}
-if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-    map.addLayer(layer_s_darnyza_15);
-} else if (map.getZoom() > 19 || map.getZoom() < 14) {
-    map.removeLayer(layer_s_darnyza_15);
-}
-if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-    map.addLayer(layer_s_obolon_18);
-} else if (map.getZoom() > 19 || map.getZoom() < 14) {
-    map.removeLayer(layer_s_obolon_18);
-}
-if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-    map.addLayer(layer_s_pechersk_21);
-} else if (map.getZoom() > 19 || map.getZoom() < 14) {
-    map.removeLayer(layer_s_pechersk_21);
-}
-if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-    map.addLayer(layer_s_golosievo_24);
-} else if (map.getZoom() > 19 || map.getZoom() < 14) {
-    map.removeLayer(layer_s_golosievo_24);
-}
-if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-    map.addLayer(layer_s_shev_27);
-} else if (map.getZoom() > 19 || map.getZoom() < 14) {
-    map.removeLayer(layer_s_shev_27);
-}
-if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-    map.addLayer(layer_s_podil_30);
-} else if (map.getZoom() > 19 || map.getZoom() < 14) {
-    map.removeLayer(layer_s_podil_30);
-}
+
+
 var osmGeocoder = new L.Control.OSMGeocoder({
     collapsed: false,
     position: 'topright',
@@ -2592,7 +2504,7 @@ var osmGeocoder = new L.Control.OSMGeocoder({
 });
 osmGeocoder.addTo(map);
 var baseMaps = {};
-L.control.layers(baseMaps,{'Потужність школи (кількість учнів 1-4 класів)<br /><table><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_23000022700000.png" /></td><td> 23 - 227 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_227000043100001.png" /></td><td> 227 - 431 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_431000063500002.png" /></td><td> 431 - 635 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_635000083900003.png" /></td><td> 635 - 839 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_8390000104300004.png" /></td><td> 839 - 1043 </td></tr></table>При кліку по школі, покаується відсоток її завантаженості. <br> Відсутність кола свідчить про відсутність таких даних': layer_cap_svyat_40},{collapsed:false}).addTo(map);
+L.control.layers(baseMaps,{'<b>Потужність школи (кількість учнів 1-4 класів)</b><br/><table><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_23000022700000.png" /></td><td> 23 - 227 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_227000043100001.png" /></td><td> 227 - 431 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_431000063500002.png" /></td><td> 431 - 635 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_635000083900003.png" /></td><td> 635 - 839 </td></tr><tr><td style="text-align: center;"><img src="legend/cap_svyat_40_8390000104300004.png" /></td><td> 839 - 1043 </td></tr></table>': layer_cap_svyat_40},{collapsed:false}).addTo(map);
 setBounds();
 var i = 0;
 layer_s_svyatosh_3.eachLayer(function(layer) {

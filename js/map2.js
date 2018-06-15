@@ -2279,98 +2279,18 @@ var layer_cap_svyat_36 = new L.geoJson(json_cap_svyat_36, {
 });
 bounds_group.addLayer(layer_cap_svyat_36);
 mymap.addLayer(layer_cap_svyat_36);
-mymap.on("zoomend", function(e) {
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-        mymap.addLayer(layer_s_svyatosh_3);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-        mymap.removeLayer(layer_s_svyatosh_3);
-    }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-        mymap.addLayer(layer_s_dnipro_6);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-        mymap.removeLayer(layer_s_dnipro_6);
-    }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-        mymap.addLayer(layer_s_solom_9);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-        mymap.removeLayer(layer_s_solom_9);
-    }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-        mymap.addLayer(layer_s_darnyza_12);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-        mymap.removeLayer(layer_s_darnyza_12);
-    }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-        mymap.addLayer(layer_s_obolon_15);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-        mymap.removeLayer(layer_s_obolon_15);
-    }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-        mymap.addLayer(layer_s_pechersk_18);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-        mymap.removeLayer(layer_s_pechersk_18);
-    }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-        mymap.addLayer(layer_s_golosievo_21);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-        mymap.removeLayer(layer_s_golosievo_21);
-    }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-        mymap.addLayer(layer_s_shev_24);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-        mymap.removeLayer(layer_s_shev_24);
-    }
-    if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-        mymap.addLayer(layer_s_podil_27);
-    } else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-        mymap.removeLayer(layer_s_podil_27);
-    }
-});
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-    mymap.addLayer(layer_s_svyatosh_3);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-    mymap.removeLayer(layer_s_svyatosh_3);
-}
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-    mymap.addLayer(layer_s_dnipro_6);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-    mymap.removeLayer(layer_s_dnipro_6);
-}
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-    mymap.addLayer(layer_s_solom_9);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-    mymap.removeLayer(layer_s_solom_9);
-}
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-    mymap.addLayer(layer_s_darnyza_12);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-    mymap.removeLayer(layer_s_darnyza_12);
-}
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-    mymap.addLayer(layer_s_obolon_15);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-    mymap.removeLayer(layer_s_obolon_15);
-}
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-    mymap.addLayer(layer_s_pechersk_18);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-    mymap.removeLayer(layer_s_pechersk_18);
-}
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-    mymap.addLayer(layer_s_golosievo_21);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-    mymap.removeLayer(layer_s_golosievo_21);
-}
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-    mymap.addLayer(layer_s_shev_24);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-    mymap.removeLayer(layer_s_shev_24);
-}
-if (mymap.getZoom() <= 19 && mymap.getZoom() >= 13) {
-    mymap.addLayer(layer_s_podil_27);
-} else if (mymap.getZoom() > 19 || mymap.getZoom() < 13) {
-    mymap.removeLayer(layer_s_podil_27);
-}
+
+mymap.addLayer(layer_s_svyatosh_3);
+mymap.addLayer(layer_s_dnipro_6);
+mymap.addLayer(layer_s_solom_9);
+mymap.addLayer(layer_s_darnyza_12);
+mymap.addLayer(layer_s_obolon_15);
+mymap.addLayer(layer_s_pechersk_18);
+mymap.addLayer(layer_s_golosievo_21);
+mymap.addLayer(layer_s_shev_24);
+mymap.addLayer(layer_s_podil_27);
+
+
 var osmGeocoder = new L.Control.OSMGeocoder({
     collapsed: false,
     position: 'topright',
