@@ -385,4 +385,9 @@ a.dashed {
 #button2 {
   display: none; }
 
+#good-bad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px; }
+
 /*# sourceMappingURL=styles.css.map */
