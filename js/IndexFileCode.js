@@ -22,7 +22,7 @@ map.on('zoomend', function (e) {
 
 
 var renderer = L.canvas();
-var hash = new L.Hash(map);
+//var hash = new L.Hash(map);
 map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
 var bounds_group = new L.featureGroup([]);
 function setBounds() {
