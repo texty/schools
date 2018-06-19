@@ -1,4 +1,20 @@
 @charset "UTF-8";
+/* Import fonts */
+@font-face {
+  font-family: "Segoe UI Regular";
+  src: url(../fonts/regular.ttf); }
+@font-face {
+  font-family: "Segoe UI Bold";
+  src: url(../fonts/bold.ttf);
+  font-weight: bold; }
+@font-face {
+  font-family: "Segoe UI Semibold";
+  src: url(../fonts/semibold.ttf);
+  font-weight: 400; }
+@font-face {
+  font-family: "Segoe UI Light";
+  src: url(../fonts/light.ttf);
+  font-weight: 100; }
 .read-more {
   grid-column: 1 / -1;
   grid-row: 4 / 5;
@@ -120,22 +136,6 @@ ul.links3 li a#orange {
 #next:hover {
   cursor: pointer; }
 
-/* Import fonts */
-@font-face {
-  font-family: "Segoe UI Regular";
-  src: url(../fonts/regular.ttf); }
-@font-face {
-  font-family: "Segoe UI Bold";
-  src: url(../fonts/bold.ttf);
-  font-weight: bold; }
-@font-face {
-  font-family: "Segoe UI Semibold";
-  src: url(../fonts/semibold.ttf);
-  font-weight: 400; }
-@font-face {
-  font-family: "Segoe UI Light";
-  src: url(../fonts/light.ttf);
-  font-weight: 100; }
 /* Map */
 #map {
   width: 100vw;

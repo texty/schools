@@ -1,3 +1,9 @@
+/* Import fonts */
+@font-face { font-family: "Segoe UI Regular"; src: url(../fonts/regular.ttf); }
+@font-face { font-family: "Segoe UI Bold"; src: url(../fonts/bold.ttf); font-weight: bold; }
+@font-face {font-family: "Segoe UI Semibold"; src: url(../fonts/semibold.ttf);  font-weight: 400; }
+@font-face {  font-family: "Segoe UI Light";  src: url(../fonts/light.ttf);  font-weight: 100; }
+
 @import "variables.scss";
 @import "footer.scss";
 
@@ -10,11 +16,7 @@ $brk-spnarrow: '(min-width: 374px) and (max-width: 767px)';
 $brk-mobile: '(min-width: 0) and (max-width: 374px)';
 
 
-/* Import fonts */
-@font-face { font-family: "Segoe UI Regular"; src: url(../fonts/regular.ttf); }
-@font-face { font-family: "Segoe UI Bold"; src: url(../fonts/bold.ttf); font-weight: bold; }
-@font-face {font-family: "Segoe UI Semibold"; src: url(../fonts/semibold.ttf);  font-weight: 400; }
-@font-face {  font-family: "Segoe UI Light";  src: url(../fonts/light.ttf);  font-weight: 100; }
+
 
 
 /* Map */
