@@ -75,8 +75,8 @@ body {
     height: 100vh;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 150px 3fr 1fr 2fr 40px 40px;
-    grid-template-rows: 10vh 15vh 35vh 25vh;
+    grid-template-columns: 250px 3fr 1fr 2fr 40px 40px;
+    grid-template-rows: 10vh 1vh 15vh 35vh 25vh;
     background-image: url(../img/art2.jpg);
     background-size: cover;
     background-position: 100% 90%;
@@ -87,8 +87,8 @@ body {
     height: 50vh;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 150px 1fr 40px 40px;
-    grid-template-rows: 10% 50% 30%;
+    grid-template-columns: 200px 1fr 40px 40px;
+    grid-template-rows: 10% 5% 45% 30%;
     background-image: url(../img/art2.jpg);
     background-size: cover;
     background-position: 60% 90%;
@@ -102,6 +102,7 @@ body {
   //margin-left: 10px;
   align-self: start;
   z-index: 1;
+  align-items: center;
 }
 
 #facebook {
@@ -120,6 +121,17 @@ body {
   z-index: 1;
 }
 
+p#published {
+  width:90%;
+  grid-column: 1/3;
+  grid-row:2/3;
+  margin-left: 10px;
+  line-height: 1.2;
+  margin-top:20px;
+  font-size: 14px;
+}
+
+
 #title, #subtitle-desk {
   @media#{$brk-xlarge} { margin-left: 10vw; }
   @media #{$brk-large} { margin-left: 5vw; }
@@ -127,7 +139,7 @@ body {
   @media #{$brk-medium},
   #{$brk-narrow},
   #{$brk-spnarrow},
-  #{$brk-mobile} {  margin-left: 2vw;  }
+  #{$brk-mobile} {  margin-left: 10%;  }
 }
 
 #title {
@@ -135,7 +147,7 @@ body {
   #{$brk-large},
   #{$brk-xlarge} {
     grid-column: 1/3;
-    grid-row: 3/4;
+    grid-row: 4/5;
     align-self: flex-end;
     //margin-bottom: 20px;
   }
@@ -146,7 +158,7 @@ body {
     grid-column: 1/-1;
     width:80%;
     //margin:auto;
-    grid-row:3/4;
+    grid-row:4/5;
     align-self: flex-end;
 
   }
@@ -158,7 +170,7 @@ body {
   #{$brk-xlarge} {
     display:block;
     grid-column: 1/3;
-    grid-row: 4/5;
+    grid-row: 5/6;
     z-index: 1;
   }
   @media #{$brk-spnarrow},
@@ -187,7 +199,7 @@ body {
   #{$brk-large},
   #{$brk-xlarge} {
     grid-column: 4/5;
-    grid-row: 4/5;
+    grid-row: 5/6;
     z-index: 1;
   }
   @media #{$brk-spnarrow},
