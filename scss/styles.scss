@@ -433,8 +433,7 @@ a.dashed {
 div.leaflet-control-container
 > div.leaflet-top.leaflet-right >
 div.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control {
-  @media #{$brk-narrow},
-  #{$brk-mobile} {
+  @media #{$brk-mobile} {
     display:none;
 
   }

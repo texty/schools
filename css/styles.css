@@ -420,7 +420,7 @@ a.dashed {
   #good-bad {
     display: block; } }
 
-@media (min-width: 767px) and (max-width: 1024px), (min-width: 0) and (max-width: 374px) {
+@media (min-width: 0) and (max-width: 374px) {
   div.leaflet-control-container
   > div.leaflet-top.leaflet-right >
   div.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control {
