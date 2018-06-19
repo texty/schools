@@ -2636,13 +2636,13 @@ layer_s_podil_30.eachLayer(function(layer) {
     addLabel(layer, i);
     i++;
 });
-resetLabels([layer_ssvyatosh_3,layer_sdnipro_6,layer_sdesnyansky_9,layer_ssolom_12,layer_sdarnyza_15,layer_sobolon_18,layer_spechersk_21,layer_sgolosievo_24,layer_sshev_27,layer_spodil_30]);
+resetLabels([layer_s_svyatosh_3,layer_s_dnipro_6,layer_s_desnyansky_9,layer_s_solom_12,layer_s_darnyza_15,layer_s_obolon_18,layer_s_pechersk_21,layer_s_golosievo_24,layer_s_shev_27,layer_s_podil_30]);
 map.on("zoomend", function(){
-    resetLabels([layer_ssvyatosh_3,layer_sdnipro_6,layer_sdesnyansky_9,layer_ssolom_12,layer_sdarnyza_15,layer_sobolon_18,layer_spechersk_21,layer_sgolosievo_24,layer_sshev_27,layer_spodil_30]);
+    resetLabels([layer_s_svyatosh_3,layer_s_dnipro_6,layer_s_desnyansky_9,layer_s_solom_12,layer_s_darnyza_15,layer_s_obolon_18,layer_s_pechersk_21,layer_s_golosievo_24,layer_s_shev_27,layer_s_podil_30]);
 });
 map.on("layeradd", function(){
-    resetLabels([layer_ssvyatosh_3,layer_sdnipro_6,layer_sdesnyansky_9,layer_ssolom_12,layer_sdarnyza_15,layer_sobolon_18,layer_spechersk_21,layer_sgolosievo_24,layer_sshev_27,layer_spodil_30]);
+    resetLabels([layer_s_svyatosh_3,layer_s_dnipro_6,layer_s_desnyansky_9,layer_s_solom_12,layer_s_darnyza_15,layer_s_obolon_18,layer_s_pechersk_21,layer_s_golosievo_24,layer_s_shev_27,layer_s_podil_30]);
 });
 map.on("layerremove", function(){
-    resetLabels([layer_ssvyatosh_3,layer_sdnipro_6,layer_sdesnyansky_9,layer_ssolom_12,layer_sdarnyza_15,layer_sobolon_18,layer_spechersk_21,layer_sgolosievo_24,layer_sshev_27,layer_spodil_30]);
+    resetLabels([layer_s_svyatosh_3,layer_s_dnipro_6,layer_s_desnyansky_9,layer_s_solom_12,layer_s_darnyza_15,layer_s_obolon_18,layer_s_pechersk_21,layer_s_golosievo_24,layer_s_shev_27,layer_s_podil_30]);
 });
