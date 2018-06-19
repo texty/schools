@@ -21,18 +21,44 @@ $brk-mobile: '(min-width: 0) and (max-width: 374px)';
 
 /* Map */
 #map {
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
+  @media  #{$brk-xlarge},
+  #{$brk-large},
+  #{$brk-medium},
+  #{$brk-spnarrow}{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media #{$brk-narrow},
+  #{$brk-mobile} {
+    width: 100vw;
+    height: 50vh;
+    padding: 0;
+    margin: 0;
+  }
+
 }
 
 #mymap {
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  //display:none;
+  @media  #{$brk-xlarge},
+  #{$brk-large},
+  #{$brk-medium},
+  #{$brk-spnarrow}{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media #{$brk-narrow},
+  #{$brk-mobile} {
+    width: 100vw;
+    height: 50vh;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .map-text{
@@ -387,8 +413,30 @@ a.dashed {
 
 
 #good-bad {
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap:10px;
+  @media  #{$brk-xlarge},
+  #{$brk-large},
+  #{$brk-medium},
+  #{$brk-spnarrow}{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+  }
+
+  @media #{$brk-narrow},
+  #{$brk-mobile} {
+    display:block;
+
+  }
+
+}
+
+div.leaflet-control-container
+> div.leaflet-top.leaflet-right >
+div.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control {
+  @media #{$brk-narrow},
+  #{$brk-mobile} {
+    display:none;
+
+  }
 }
 
