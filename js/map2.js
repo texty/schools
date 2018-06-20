@@ -22,7 +22,7 @@ mymap.on('zoomend', function (e) {
 
 var renderer = L.canvas();
 
-var hash = new L.Hash(mymap);
+//var hash = new L.Hash(mymap);
 mymap.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
 var bounds_group = new L.featureGroup([]);
 function setBounds() {
@@ -2417,13 +2417,14 @@ layer_s_podil_27.eachLayer(function(layer) {
     addLabel(layer, i);
     i++;
 });
-resetLabels([layer_ssvyatosh_3,layer_sdnipro_6,layer_ssolom_9,layer_sdarnyza_12,layer_sobolon_15,layer_spechersk_18,layer_sgolosievo_21,layer_sshev_24,layer_spodil_27]);
+
+resetLabels([layer_s_svyatosh_3,layer_s_dnipro_6,layer_s_desnyansky_9,layer_s_solom_12,layer_s_darnyza_15,layer_s_obolon_18,layer_s_pechersk_21,layer_s_golosievo_24,layer_s_shev_27,layer_s_podil_30]);
 mymap.on("zoomend", function(){
-    resetLabels([layer_ssvyatosh_3,layer_sdnipro_6,layer_ssolom_9,layer_sdarnyza_12,layer_sobolon_15,layer_spechersk_18,layer_sgolosievo_21,layer_sshev_24,layer_spodil_27]);
+    resetLabels([layer_s_svyatosh_3,layer_s_dnipro_6,layer_s_desnyansky_9,layer_s_solom_12,layer_s_darnyza_15,layer_s_obolon_18,layer_s_pechersk_21,layer_s_golosievo_24,layer_s_shev_27,layer_s_podil_30]);
 });
 mymap.on("layeradd", function(){
-    resetLabels([layer_ssvyatosh_3,layer_sdnipro_6,layer_ssolom_9,layer_sdarnyza_12,layer_sobolon_15,layer_spechersk_18,layer_sgolosievo_21,layer_sshev_24,layer_spodil_27]);
+    resetLabels([layer_s_svyatosh_3,layer_s_dnipro_6,layer_s_desnyansky_9,layer_s_solom_12,layer_s_darnyza_15,layer_s_obolon_18,layer_s_pechersk_21,layer_s_golosievo_24,layer_s_shev_27,layer_s_podil_30]);
 });
 mymap.on("layerremove", function(){
-    resetLabels([layer_ssvyatosh_3,layer_sdnipro_6,layer_ssolom_9,layer_sdarnyza_12,layer_sobolon_15,layer_spechersk_18,layer_sgolosievo_21,layer_sshev_24,layer_spodil_27]);
+    resetLabels([layer_s_svyatosh_3,layer_s_dnipro_6,layer_s_desnyansky_9,layer_s_solom_12,layer_s_darnyza_15,layer_s_obolon_18,layer_s_pechersk_21,layer_s_golosievo_24,layer_s_shev_27,layer_s_podil_30]);
 });
