@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <meta name="description"
+          content="The closest school in the district">
+    <meta name="author" content="">
+
+    <title>The closest school in the district</title>
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:site_name"
+          content="The closest school in the district"/>
+    <meta property="og:type" content="http://texty.org.ua/d/2018/schools/en/"/>
+    <meta property="og:title"
+          content="The closest school in the district"/>
+    <meta property="og:image" content="http://texty.org.ua/d/2018/schools/img/art2.jpg"/>
+    <meta property="og:description"
+          content='How the new system of school enrollment based on residency works? The map of Kyiv public schools zones with the addresses appropriately attached to them.'/>
+    <meta property="og:url" content="http://texty.org.ua/d/2018/schools/en/"/>
+
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:site" content="@textyorgua"/>
+    <meta property="twitter:account_id" content="49572937"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="http://texty.org.ua/d/2018/schools/en/"/>
+    <meta name="twitter:title"
+          content="The closest school in the district"/>
+    <meta name="twitter:description"
+          content='How the new system of school enrollment based on residency works? The map of Kyiv public schools zones with the addresses appropriately attached to them.'/>
+    <meta name="twitter:image:src" content="http://texty.org.ua/d/2018/schools/img/art2.jpg"/>
+    <meta name="twitter:image:width" content="1200"/>
+    <meta name="twitter:image:height" content="630"/>
+
+
+    <!-- Other Meta Tags -->
+    <meta name="title"
+          content="The closest school in the district">
+    <meta name="description"
+          content='How the new system of school enrollment based on residency works? The map of Kyiv public schools zones with the addresses appropriately attached to them.'>
+
+
+    <!-- Styles sheets-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/leaflet.css">
+    <link rel="stylesheet" href="../css/qgis2web.css">
+    <link rel="stylesheet" href="../css/Control.OSMGeocoder.css">
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+
+    <div id="logo-icons">
+        <div class="logo">
+            <a href="http://texty.org.ua/" target="_blank"><img class='gif' style="width:100%" src="../img/logo.gif"/></a>
+        </div>
+
+
+        <div class="social-icons">
+            <div id="translate"><a href="http://texty.org.ua/d/2018/schools/"><span> Українською </span> </a></div>
+            <div class="facebook">
+                <a class='share-btn'
+                   href="https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2018/schools/en/">
+                    <svg class="cover" id="facebook" viewBox="0 0 448 512">
+                        <path d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="twitter">
+                <a class='share-btn' href="https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2018/schools/en/">
+                    <svg id="twitter" viewBox="0 0 448 512">
+                        <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--<img id="main-pic" class="full-width" src="img/art2.jpg"/>-->
+
+
+    <h1 id="title">The closest school <br> in the district</h1>
+    <div id="subtitle-desk">
+        <h3>How the new system of school enrollment based on residency works? The map of Kyiv public schools zones with
+            the addresses appropriately attached to them.
+        </h3>
+    </div>
+    <h5 id="credits-desk">By: Yaroslava Tymoshchuk, Nadya Kelm, Mykola Dobysh</h5>
+
+</div>
+
+
+<div class="text">
+    <div id="subtitle-mob">
+        <h3>How the new system of school enrollment based on residency works? The map of Kyiv public schools zones with
+            the addresses appropriately attached to them.</h3>
+    </div>
+
+    <h5 id="credits-mob">By: Yaroslava Tymoshchuk, <br>Nadya Kelm, <br>Mykola Dobysh</h5>
+
+    <p id="lead">96 parents (both moms and dads) play in a kind of lottery. Their prize depends on a piece of paper with
+        portrait of Ivan Bahrianyi (Ukrainian 20th century writer), who Kyiv public school #148 is named after. The
+        lower the number on the paper is – the more chances they get. One pregnant mom pulls out a piece of paper with
+        number 1 and hits the jackpot – she’s just won the guaranteed school enrollment not only for her son this year.
+        In 6 or 7 years his future brother or sister will go to this public school as well. Only those kids who are
+        registered by the addresses in this school zone, or whose parents work in this school, or whose older brothers
+        and sisters already study here can be enrolled. The others must test fortune. New system of the 1st grade
+        enrollment is considered to be fairer than the previous one. But not every is ready to study in these
+        “egalitarian” schools.
+    </p>
+
+    <p>Previously parents had to strive really hard in order to enroll their kid into one of so called “prestigious”
+        schools in Kyiv. 6 year old child was forced to compete as an adult in various testing and interviews.
+    </p>
+
+    <p>New admission system is simple – kids go to school according to their residency – no more problems with
+        enrollment. But new problem emerges – there are just not enough schools in newly built residential areas. The
+        developers did not have to worry about building the schools proportionally to the apartments built and sold,
+        because parents could enroll their kids into schools somewhere else. Now this opportunity has shrunk
+        essentially. Tetyana Podolyan, specialist from the local education department of Solomyanskyy district of Kyiv,
+        tells us about the recent case when parents purchased the apartment at a certain house in this district because
+        of the school zone it was located in - they wanted their daughter to study at the reputable public gymnasium. So
+        now the developers would be obliged to build the schools if they want to sell the dwellings.
+    </p>
+    <p>We’ve tried to figure out how the enrollment into the first grade takes place now.
+    </p>
+
+    <p class="insert"><span>Mom 80 is angry with the fact that the lottery numbers counted all the parents – even those who had not shown up</span>
+    </p>
+
+    <p>Mom 2 is one of the luckiest today, but still she finds it strange that her child’s future depends on the
+        lottery.
+    </p>
+
+    <p>Mom 1, the pregnant one, comes up to pull out the lotto ticket together with her son who is a future first grader
+        – and everyone applauses to them, because they are the first ones out of 96 applicants.
+    </p>
+
+    <p>Mom 77 did not even hope for the luck – she did not expect much in life ever since she had left the occupied
+        Donbas area with her son, then a kindergarten pupil.
+    </p>
+
+    <p>Mom 80 is angry with the fact that the lottery numbers counted all the parents – even those who had not shown up.
+    </p>
+
+    <p>The smaller the number is the more chances one has. Lottery day at public school #148, around 3 minutes distance
+        walk from Darnytsia subway station, has become a hot one.</p>
+
+    <p>Those who have not been enrolled in a first place(the ones from the addresses attached to this school, whose
+        parents work in it or whose brothers and sisters already study here) could claim for vacant places left. In
+        total 97 applicants pretended for 4 school places according to applications written by their parents. Therefore
+        it is necessary to draw the lots out from a transparent box.
+    </p>
+
+    <p>While the lottery procedure precedes school Principal Serhiy Horbachov announces that the number of vacant places
+        has grown and that all the lots numbers up to 40 will be enrolled. To avoid re-drawing the lots parents book
+        themselves a place in a queue in accordance with the numbers they've already got.</p>
+    <p>The lottery itself is an idea of <b>Serhiy Horbachov</b>. He finds this method to be far from an ideal one, but
+        all the rest considered (in accordance with the dates of birth, or by the order of applications submissions, or
+        competitive based selection) were even worse due to high corruption risks.</p>
+    <p>Horbachev has also come up with the idea how to check the parents who could bring fake documents, such as lease
+        contracts, to fool new system of admission and to get into desired school.</p>
+    <p>Parents have to provide a legal document of their residency in order to prove their child’s right to attend the
+        certain school. This document may be a registration stamp (in special certificate), a lease contract, document
+        certifying their IDP (internally displaced person) status or their estate ownership document.</p>
+
+    <p class="insert"><span>Some real estate agencies offered their “assistance” with documents needed for school admission</span>
+    </p>
+    <p>Thus some real estate agencies offered their “assistance” with documents needed for school admission in Kyiv. One
+        could have bought a fake lease contract or residential certificate with registration stamp in it. Only school
+        principal had the right to control the authenticity of these documents.</p>
+    <p>School #148, where Serhiy Horbachev serves as a principal, had twice more applications than it could admit first
+        graders. So the Principal had to be attentive.</p>
+    <p>First of all at pre-school meeting with parents in April he warned them not to cheat. When the time of documents
+        admission started he checked the authenticity of the documents himself. The simplest way to do it was to ask the
+        neighbors whether such family really lived at provided address.</p>
+    <p>Serhiy Horbachev worries not only about his school – he is also a member of the group that worked out the new
+        admission rules. The changes cancelled the interviews for pre-schoolers which used to be a common practice and
+        often were used, as Horbachev admits, to hide the unfair “market” schemes for admission in exchange of so called
+        “donations”. The kids are treated more equally now, because they are guaranteed with a place at the nearest
+        public school. The schools do not have to “select” anymore.</p>
+    <p>Even when the interviews were fair and transparent they still could not be good criteria, Horbahev thinks. Within
+        20-25 minutes it is practically impossible to find out whether the child is ready for the school. Besides that a
+        six year old kid can be stressed or not willing to talk to a stranger, and not every school psychologist can
+        perform the evaluation professionally enough in such delicate circumstances.</p>
+    <p>Another common practice used previously to get enrolled was special “school preparation courses” – some of them
+        really taught children and some just trained the “correct answers” for future interview. Almost a half of Kyiv
+        schools enrolled their first graders after such courses with no regard to child’s residency.</p>
+    <p>To attach certain houses with its addresses to the schools one had to know the number of the kids living in these
+        houses. Till now no one has had any idea about how many first graders this or that school would get. Only after
+        parents submitted their applications to the school this number could had been figured out.</p>
+    <p>This year for the first time schools get actual data from a special register about the number of the kids
+        planning to attend the first grade. Now it is quite simple for the parents – all they have to do is to fulfill
+        an application at “their” school, which would be checked by the school principal at the register. If all the
+        data is correct – it’s done, the child is enrolled.</p>
+    <p>The register is being regularly updated. The principals have to fill in the new data about new kids. The updated
+        register will help to determine school zones more precisely next year.</p>
+    <p>This year in January when the creation of the school zones in accordance with new admission rules started it
+        figured out that there was a gap in data. Some school areas contained the whole streets that no longer existed
+        and some of newly built houses still were invisible at the system.</p>
+    <p>In order to distribute the addresses correctly between the schools the specialists from local education
+        departments had to traverse the districts by feet, because the old database could not be trusted.</p>
+    <p>The time needed to get to school from a certain address as well as any difficulties that might occur were also
+        taken into account. For example if it was necessary for the child to cross the road on her or his way to a
+        certain school, and there was an alternative way to walk only through the sidewalks to get to another school –
+        the house is to be attached to the latter.</p>
+    <p>In August-September each school has to announce how many first year classes it can provide in school year of
+        2019-2020. Thus the children will be distributed between the schools in accordance with the school zones. Who
+        will attend what school would be figured out later – approximately six months prior before the next academic
+        year. It means that in March parents can submit their applications and the principals can start checking the
+        details of the documents provided.</p>
+
+    <p>An interactive map of Kyiv public schools and the addresses attached to them. In our newsroom we’ve made an
+        assumption that the schools with higher EIT (External Independent Testing) results have lobbied fewer addresses
+        to be assigned to their zones. Thus they had some “space for maneuvering” left and could select their future
+        students. To see what schools that enroll first graders have been ranked among TOP-30 in EIT score ranking
+        please click “Best Schools” button. To check the addresses and the school zones they are attached to please
+        enlarge the map.</p>
+</div>
+
+<div class="map-text" style="margin-top:100px;">
+    <p style="margin:0 10px 20px 10px"><i>An interactive map of Kyiv public schools and the addresses attached to them.
+        In our newsroom we’ve made an assumption that the schools with higher EIT (External Independent Testing) results
+        have lobbied fewer addresses to be assigned to their zones. Thus they had some “space for maneuvering” left and
+        could select their future students. To see what schools that enroll first graders have been ranked among TOP-30
+        in EIT score ranking please click “Best Schools” button. To check the addresses and the school zones they are
+        attached to please enlarge the map.</i></p>
+
+    <button id="button1" class="btn" onclick="">Best Schools!</button>
+    <div id="map"></div>
+
+    <button id="button2" class="btn" onclick="">All Schools!</button>
+    <div id="mymap"></div>
+
+
+</div>
+
+
+
+
+
+<script src="../lib/share-behavior.js"></script>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../js/qgis2web_expressions.js"></script>
+<script src="../js/leaflet.js"></script>
+<script src="../js/leaflet.rotatedMarker.js"></script>
+<script src="../js/leaflet.pattern.js"></script>
+<!--script src="js/leaflet-hash.js"></script-->
+<script src="../js/Autolinker.min.js"></script>
+<script src="../js/rbush.min.js"></script>
+<script src="../js/labelgun.min.js"></script>
+<script src="../js/labels.js"></script>
+<script src="../js/Control.OSMGeocoder.js"></script>
+<script src="../data/Svyatoshynsky_area_houses3_1.js"></script>
+<script src="../data/Svytoshynsky_area_connections3_2.js"></script>
+<script src="../data/s_svyatosh_3.js"></script>
+<script src="../data/Dnipro_houses_4.js"></script>
+<script src="../data/Dnipro_area_connections4_5.js"></script>
+<script src="../data/s_dnipro_6.js"></script>
+<script src="../data/desnyansky_houses_7.js"></script>
+<script src="../data/Desnyansjy_area_connections3_8.js"></script>
+<script src="../data/s_desnyansky_9.js"></script>
+<script src="../data/solomyansky_houses2_10.js"></script>
+<script src="../data/Solomyansky_area_connections3_11.js"></script>
+<script src="../data/s_solom_12.js"></script>
+<script src="../data/Darnytsky_area_connections_13.js"></script>
+<script src="../data/Darnytsky_houses_14.js"></script>
+<script src="../data/s_darnyza_15.js"></script>
+<script src="../data/Obolon_area_houses_16.js"></script>
+<script src="../data/Obolon_area_connections3_17.js"></script>
+<script src="../data/s_obolon_18.js"></script>
+<script src="../data/Pechersky_area_connections2_19.js"></script>
+<script src="../data/Pechersky_area_houses3_20.js"></script>
+<script src="../data/s_pechersk_21.js"></script>
+<script src="../data/Golosievsky_area_connections2_22.js"></script>
+<script src="../data/Golosievsky_houses_23.js"></script>
+<script src="../data/s_golosievo_24.js"></script>
+<script src="../data/Shevchenkivsky_area_connections2_25.js"></script>
+<script src="../data/Shevchenkivsky_area_houses2_26.js"></script>
+<script src="../data/s_shev_27.js"></script>
+<script src="../data/Podil_area_houses3_28.js"></script>
+<script src="../data/Podil_area_connections4_29.js"></script>
+<script src="../data/s_podil_30.js"></script>
+<script src="../data/cap_darniza_31.js"></script>
+<script src="../data/cap_dnipro_32.js"></script>
+<script src="../data/cap_desn_33.js"></script>
+<script src="../data/cap_podil_34.js"></script>
+<script src="../data/cap_shev_35.js"></script>
+<script src="../data/cap_pechersk_36.js"></script>
+<script src="../data/cap_golos_37.js"></script>
+<script src="../data/cap_solom_38.js"></script>
+<script src="../data/cap_obolon_39.js"></script>
+<script src="../data/cap_svyat_40.js"></script>
+<script src="../js/IndexFileCode.js"></script>
+
+
+<!-- map2-->
+<script src="../map2/js/qgis2web_expressions.js"></script>
+<script src="../map2/js/leaflet.js"></script>
+<script src="../map2/js/leaflet.rotatedMarker.js"></script>
+<script src="../map2/js/leaflet.pattern.js"></script>
+<!--script src="map2/js/leaflet-hash.js"></script-->
+<script src="../map2/js/Autolinker.min.js"></script>
+<script src="../map2/js/rbush.min.js"></script>
+<script src="../map2/js/labelgun.min.js"></script>
+<script src="../map2/js/labels.js"></script>
+<script src="../map2/js/Control.OSMGeocoder.js"></script>
+<script src="../map2/data/Svyatoshynsky_area_houses3_1.js"></script>
+<script src="../map2/data/Svytoshynsky_area_connections3_2.js"></script>
+<script src="../map2/data/s_svyatosh_3.js"></script>
+<script src="../map2/data/Dnipro_houses_4.js"></script>
+<script src="../map2/data/Dnipro_area_connections4_5.js"></script>
+<script src="../map2/data/s_dnipro_6.js"></script>
+<script src="../map2/data/solomyansky_houses2_7.js"></script>
+<script src="../map2/data/Solomyansky_area_connections3_8.js"></script>
+<script src="../map2/data/s_solom_9.js"></script>
+<script src="../map2/data/Darnytsky_area_connections_10.js"></script>
+<script src="../map2/data/Darnytsky_houses_11.js"></script>
+<script src="../map2/data/s_darnyza_12.js"></script>
+<script src="../map2/data/Obolon_area_houses_13.js"></script>
+<script src="../map2/data/Obolon_area_connections3_14.js"></script>
+<script src="../map2/data/s_obolon_15.js"></script>
+<script src="../map2/data/Pechersky_area_connections2_16.js"></script>
+<script src="../map2/data/Pechersky_area_houses3_17.js"></script>
+<script src="../map2/data/s_pechersk_18.js"></script>
+<script src="../map2/data/Golosievsky_area_connections2_19.js"></script>
+<script src="../map2/data/Golosievsky_houses_20.js"></script>
+<script src="../map2/data/s_golosievo_21.js"></script>
+<script src="../map2/data/Shevchenkivsky_area_connections2_22.js"></script>
+<script src="../map2/data/Shevchenkivsky_area_houses2_23.js"></script>
+<script src="../map2/data/s_shev_24.js"></script>
+<script src="../map2/data/Podil_area_houses3_25.js"></script>
+<script src="../map2/data/Podil_area_connections4_26.js"></script>
+<script src="../map2/data/s_podil_27.js"></script>
+<script src="../map2/data/cap_darniza_28.js"></script>
+<script src="../map2/data/cap_dnipro_29.js"></script>
+<script src="../map2/data/cap_podil_30.js"></script>
+<script src="../map2/data/cap_shev_31.js"></script>
+<script src="../map2/data/cap_pechersk_32.js"></script>
+<script src="../map2/data/cap_golos_33.js"></script>
+<script src="../map2/data/cap_solom_34.js"></script>
+<script src="../map2/data/cap_obolon_35.js"></script>
+<script src="../map2/data/cap_svyat_36.js"></script>
+<script src="map2.js"></script>
+
+<div id="button">
+    <h3 class="donate">TEXTY.ORG.UA is an independent media without annoying advertisement and pre-paid materials. To keep working we need your support.</h3>
+
+    <div id="button-container">
+        <button onclick="location.href='https://www.liqpay.ua/api/3/checkout?data=eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJwdWJsaWNfa2V5IjoiaTc2NjUwNTYyODI3IiwiYW1vdW50IjoiNTAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0J%2FQvtC20LXRgNGC0LLQsCIsInR5cGUiOiJkb25hdGUiLCJsYW5ndWFnZSI6InVrIn0%3D&signature=YFkd4Z74QCJXRxMTPoWm0JVlkX4%3D'" id="support-us">DONATE</button>
+    </div>
+
+</div>
+
+
+
+<h2 class="read-text"><b>Read also:</b></h2>
+<div class="read-more" style="margin:50px 0 100px 0;">
+
+    <div class="read-more-first">
+        <a target="_blank" href="http://texty.org.ua/d/2019/lonely-heaven/en"><img style="width:90%;"
+                                                                         src="../img/storeys.png"
+                                                                         class="img-responsive" alt="The storeys of loneliness"></a>
+    </div>
+    <div class="read-more-second">
+        <a target="_blank" href="http://texty.org.ua/d/2018/mnews/eng/"><img style="width:90%;" src="../img/badnews.png"
+                                                                       class="img-responsive"
+                                                                       alt="we have got bad news"></a>
+    </div>
+    <div class="read-more-third">
+        <a target="_blank"
+           href="http://texty.org.ua/d/2018/amber_eng/"><img
+                style="width:90%;"
+                src="../img/leprosy.png"
+                class="img-responsive"
+                alt="leprosy of the land"></a>
+    </div>
+</div>
+<section id="created_texty">
+    <div>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2018/schools/en/" class="share-btn"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2018/schools/en/" class="share-btn"><i class="fab fa-twitter"></i></a>
+        <h3>Created by Texty</h3>
+    </div>
+    <div>
+        <a href="http://texty.org.ua/" target="_blank"><img src="../img/logo1.png" alt="texty.org.ua"></a>
+    </div>
+</section>
+
+<script>
+
+    jQuery(function() {
+        var getWindow = jQuery(window);
+        var windowHeight = getWindow.height();
+        jQuery(window).scroll(function(){
+            if(jQuery(window).scrollTop() > windowHeight ){
+                jQuery("#translate").css("display", "none");
+            } else {
+                jQuery("#translate").css("display", "flex");
+            }
+
+        });
+    });
+
+    $('div.leaflet-control-container > div.leaflet-top.leaflet-right > div.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control > form > div.leaflet-control-layers-overlays > label > div > input').css("display", "none");
+    $("#mymap").css("display", "none");
+
+    $('#button1').on("click", function () {
+        $("#map").css("display", "none");
+        $("#mymap").css("display", "block");
+        $("#button1").css("display", "none");
+        $("#button2").css("display", "block");
+    });
+
+    $('#button2').on("click", function () {
+        $("#mymap").css("display", "none");
+        $("#map").css("display", "block");
+        $("#button1").css("display", "block");
+        $("#button2").css("display", "none");
+    });
+
+    $('div.leaflet-control-container > div.leaflet-top.leaflet-right > div.leaflet-control-geocoder.leaflet-control-geocoder-expanded.leaflet-control').css("display", "none");
+</script>
+
+<!-- Footer-->
+
+
+
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18136548-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+</html>
