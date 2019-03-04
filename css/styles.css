@@ -136,6 +136,71 @@ ul.links3 li a#orange {
 #next:hover {
   cursor: pointer; }
 
+.logo {
+  height: 50px;
+  width: 150px;
+  grid-column: 1/2; }
+  @media (min-width: 1800px) {
+    .logo {
+      width: 250px; } }
+  .logo a {
+    height: 100%;
+    display: flex; }
+    .logo a img {
+      margin: auto; }
+
+.social-icons {
+  grid-column: 3/4;
+  display: grid;
+  grid-template-columns: auto 40px 40px;
+  position: fixed;
+  right: 5px;
+  top: 5px; }
+  @media (min-width: 1800px) {
+    .social-icons {
+      grid-template-columns: auto 60px 60px;
+      right: 10px;
+      top: 5px; } }
+  .social-icons div#translate {
+    font-family: Segoe UI Regular, sans-serif;
+    display: flex; }
+  .social-icons a {
+    margin: auto;
+    text-decoration: none; }
+  .social-icons a span {
+    border-bottom: 1px dashed black;
+    margin-right: 20px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: black !important; }
+    @media (max-width: 800px) {
+      .social-icons a span {
+        font-size: 14px; } }
+
+.facebook {
+  width: 30px;
+  margin-right: 10px;
+  grid-column: 2/3; }
+  @media (min-width: 1800px) {
+    .facebook {
+      width: 50px; } }
+
+.twitter {
+  width: 30px;
+  grid-column: 3/4; }
+  @media (min-width: 1800px) {
+    .twitter {
+      width: 50px; } }
+
+svg#facebook {
+  z-index: 1000;
+  fill: black; }
+
+svg#twitter {
+  z-index: 1000;
+  fill: black; }
+
 /* Map */
 @media (min-width: 1441px) and (max-width: 2570px), (min-width: 1286px) and (max-width: 1440px), (min-width: 1024px) and (max-width: 1285px), (min-width: 374px) and (max-width: 767px) {
   #map {
@@ -205,35 +270,6 @@ body {
     background-image: url(../img/art2.jpg);
     background-size: cover;
     background-position: 60% 90%; } }
-
-#logo {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  align-self: start;
-  z-index: 1;
-  align-items: center; }
-
-#facebook {
-  grid-column: -3/-2;
-  grid-row: 1/2;
-  width: 30px;
-  height: 30px;
-  justify-self: right;
-  z-index: 1;
-  position: fixed;
-  top: 10px;
-  right: 60px; }
-
-#twitter {
-  grid-column: -2/-1;
-  grid-row: 1/2;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  z-index: 1;
-  position: fixed;
-  top: 10px;
-  right: 10px; }
 
 p#published {
   width: 90%;
@@ -431,5 +467,78 @@ a.dashed {
   > div.leaflet-top.leaflet-right >
   div.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control {
     display: none; } }
+
+#created_texty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  margin: 4em 15% 4em 15%; }
+  #created_texty i {
+    box-sizing: content-box;
+    margin: 0.5em;
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #8d8d8d;
+    color: #8d8d8d;
+    border-radius: 50%;
+    padding: 0.5em;
+    font-size: 2.5em;
+    line-height: 1;
+    transition: all 0.5s; }
+    #created_texty i:hover {
+      border: 1px solid #333333;
+      color: #333333; }
+  #created_texty img {
+    max-height: 4em;
+    max-width: 90%; }
+  #created_texty div {
+    text-align: center; }
+  #created_texty h3 {
+    text-align: center;
+    font-size: 1.5rem; }
+
+/*---------- button -------*/
+#button {
+  width: 90%;
+  /* 100% of parent container*/
+  max-width: 700px;
+  margin: 100px auto;
+  line-height: 1.6; }
+  #button h3.donate {
+    line-height: 1.6;
+    font-size: 20px !important;
+    font-weight: 800;
+    text-align: center; }
+    @media (max-width: 1024px) and (orientation: portrait) {
+      #button h3.donate {
+        font-size: 20px !important; } }
+    @media (min-width: 1800px) {
+      #button h3.donate {
+        font-size: 30px; } }
+
+#button-container {
+  width: 100%;
+  display: flex; }
+
+#support-us {
+  margin: 20px auto;
+  width: auto;
+  background-color: #ffc423 !important;
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-weight: 800;
+  font-size: 18px;
+  cursor: pointer; }
+  @media (max-width: 1024px) and (orientation: portrait) {
+    #support-us {
+      font-size: 20px !important; } }
+  @media (min-width: 1800px) {
+    #support-us {
+      font-size: 30px; } }
 
 /*# sourceMappingURL=styles.css.map */
