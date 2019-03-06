@@ -142,7 +142,7 @@ ul.links3 li a#orange {
   grid-column: 1/2; }
   @media (min-width: 1800px) {
     .logo {
-      width: 250px; } }
+      width: 200px; } }
   .logo a {
     height: 100%;
     display: flex; }
@@ -173,7 +173,8 @@ ul.links3 li a#orange {
     font-weight: 800;
     font-size: 20px;
     letter-spacing: 1px;
-    color: black !important; }
+    color: black !important;
+    background-color: #f4eac7; }
     @media (max-width: 800px) {
       .social-icons a span {
         font-size: 14px; } }
@@ -184,14 +185,14 @@ ul.links3 li a#orange {
   grid-column: 2/3; }
   @media (min-width: 1800px) {
     .facebook {
-      width: 50px; } }
+      width: 40px; } }
 
 .twitter {
   width: 30px;
   grid-column: 3/4; }
   @media (min-width: 1800px) {
     .twitter {
-      width: 50px; } }
+      width: 40px; } }
 
 svg#facebook {
   z-index: 1000;

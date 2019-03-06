@@ -2504,7 +2504,7 @@ var osmGeocoder = new L.Control.OSMGeocoder({
 });
 osmGeocoder.addTo(map);
 var baseMaps = {};
-L.control.layers(baseMaps,{'<b>School capacity (amount of students of 1-4 grades)</b><br /><table><tr><td style="text-align: center;"><img src="../map2/legend/cap_svyat_36_23000022700000.png" /></td><td> 23 - 227 </td></tr><tr><td style="text-align: center;"><img src="../map2/legend/cap_svyat_36_227000043100001.png" /></td><td> 227 - 431 </td></tr><tr><td style="text-align: center;"><img src="../map2/legend/cap_svyat_36_431000063500002.png" /></td><td> 431 - 635 </td></tr><tr><td style="text-align: center;"><img src="../map2/legend/cap_svyat_36_635000083900003.png" /></td><td> 635 - 839 </td></tr><tr><td style="text-align: center;"><img src="../map2/legend/cap_svyat_36_8390000104300004.png" /></td><td> 839 - 1043 </td></tr></table>': layer_cap_svyat_40},{collapsed:false}).addTo(map);
+L.control.layers(baseMaps,{'<b>School capacity (the number of students in grades 1-4)</b><br /><table><tr><td style="text-align: center;"><img src="../map2/legend/cap_svyat_36_23000022700000.png" /></td><td> 23 - 227 </td></tr><tr><td style="text-align: center;"><img src="../map2/legend/cap_svyat_36_227000043100001.png" /></td><td> 227 - 431 </td></tr><tr><td style="text-align: center;"><img src="../map2/legend/cap_svyat_36_431000063500002.png" /></td><td> 431 - 635 </td></tr><tr><td style="text-align: center;"><img src="../map2/legend/cap_svyat_36_635000083900003.png" /></td><td> 635 - 839 </td></tr><tr><td style="text-align: center;"><img src="../map2/legend/cap_svyat_36_8390000104300004.png" /></td><td> 839 - 1043 </td></tr></table>': layer_cap_svyat_40},{collapsed:false}).addTo(map);
 setBounds();
 var i = 0;
 layer_s_svyatosh_3.eachLayer(function(layer) {
